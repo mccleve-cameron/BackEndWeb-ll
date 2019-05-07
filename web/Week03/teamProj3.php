@@ -18,7 +18,7 @@
         $email = $_POST['email'];
         $major = $_POST['major'];
         $comment = $_POST['comment'];
-    //$continents = $_POST["continent"];
+        $continents = $_POST["continent"];
 
         echo "Name is: ".$name. "<br/>";		
         echo "Email is: ".$email. "<br/>";
@@ -28,10 +28,10 @@
 
         echo "<h3>Continents you've been to!</h3>";
     
-       // foreach($continents as $continent) { 
-         //   $continent_clean = htmlspecialchars($continent);
-           // echo "<li><p>$continent_clean</p><?li>";
-        //}
+       foreach($continents as $continent) { 
+            $continent_clean = htmlspecialchars($continent);
+            echo "<li><p>$continent_clean</p><?li>";
+        }
     ?>
     
 </body>
