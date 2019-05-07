@@ -18,6 +18,8 @@
 $name = $_POST['Name'];
 $email = $_POST['email'];
 $major = $_POST['major'];
+$comment = $_POST['comment']
+$continents = $_POST["continent"];
 
 		echo "Name is: ".$name. "<br/>";		
 		echo "Email is: ".$email. "<br/>";
@@ -26,15 +28,11 @@ $major = $_POST['major'];
 
 
 		echo "<h3>Continents you've been to!</h3>";
-		$total = 0;
-		if(!empty($_POST['continent'])) {
-			 foreach($_POST['continent']) { 
-
-				echo "continent";
-				echo "<br/>";
-				
-			 }
-		 }
+	
+        foreach($continents as $continent) { 
+            $continent_clean = htmlspecialchars($continent);
+        echo "<li><p>$continent_clean</p><?li>";
+        }
 
 
 		?>
