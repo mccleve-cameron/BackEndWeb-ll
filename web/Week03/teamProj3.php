@@ -17,7 +17,7 @@
         $name = $_POST['Name'];
         $email = $_POST['email'];
         $major = $_POST['major'];
-        $comment = $_POST['comment']
+        $comment = $_POST['comment'];
     //$continents = $_POST["continent"];
 
         echo "Name is: ".$name. "<br/>";		
