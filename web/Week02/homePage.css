@@ -1,0 +1,137 @@
+
+.nav {
+    background-image: -webkit-gradient( linear,
+    left bottom,
+    left top,
+    color-stop(0, rgb(45, 60, 60)),
+    color-stop(1, rgb(200, 200, 200)));
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    opacity: .8;
+    margin-top: -12px;
+}
+
+ul {
+    text-align: center;
+    list-style-type: none;
+    overflow: hidden;
+    position: -webkit-sticky;
+    /* Safari */
+    ;
+    position: sticky;
+    color: white;
+    width: 100%;
+
+
+}
+
+.head {
+    padding-bottom: 290px;
+    padding-top: 0em;
+    padding-left: 3em;
+    padding-right: 7em;
+    font-size: 5vw;
+    color: red;
+    margin-bottom: auto;
+    background: url(CanyonFamPic.jpg);   
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+li {
+    padding: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+    float: left;
+    width: 150px;
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+li a:hover{
+    color: red;
+    
+}
+
+footer {
+    padding: 15px;
+    color: white;
+    background-color: rgb(128, 0, 0);
+    text-align: center;
+    border-radius: 1px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    opacity: .8;
+}
+
+h3,
+p {
+    padding-left: 50px;
+    padding-right: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+h2 {
+    padding: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h1 {
+
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+body {
+ background-color: aliceblue;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+}
+
+section {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.left{
+    flex: 1;
+    margin: auto;
+
+}
+
+section img{
+    max-width: 80%;
+}
+
+.right{
+    margin: auto;
+    flex: 1;
+
+}
+
+.border {
+    border: 1px solid;
+    background-color: darkgray
+}
