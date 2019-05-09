@@ -10,7 +10,7 @@
 
 <body>
 
-	<h2>Please Review Your Purchase;</h2>
+	<h2>Please Review Your Purchase</h2>
     
     <?php
 
