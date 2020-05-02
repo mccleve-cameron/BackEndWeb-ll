@@ -20,9 +20,4 @@
     {
         echo "<strong>" . $row["book"] . " " . $row["chapter"] . ":" . $row["verse"] . "</strong> " . $row["content"] . "<br>";
     }
-
-
-
-    
-
 ?>

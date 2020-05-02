@@ -1,3 +1,25 @@
+/*Host
+ec2-54-227-245-146.compute-1.amazonaws.com
+
+Database
+d54ldp8o2hi2p6
+
+User
+xishlqtlnqqhqr
+
+Port
+5432
+
+Password
+a5599158f6b6bba85cd781c336281b6ac6e2d64a10097e5cec6281617ab2fc52
+
+URI
+postgres://xishlqtlnqqhqr:a5599158f6b6bba85cd781c336281b6ac6e2d64a10097e5cec6281617ab2fc52@ec2-54-227-245-146.compute-1.amazonaws.com:5432/d54ldp8o2hi2p6
+
+Heroku CLI
+heroku pg:psql postgresql-infinite-49543 --app arcane-harbor-53824
+*/
+
 CREATE SCHEMA teach_05;
 
 CREATE TABLE teach_05.scriptures
