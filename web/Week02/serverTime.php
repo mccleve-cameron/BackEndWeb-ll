@@ -1,4 +1,3 @@
-<?php echo date("D M d, Y G:i a"); ?>
 
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +15,10 @@
 
 <body>
     <div>
-        <?php echo date("D M d, Y G:i a"); ?>
+        <h2>Current time is:</h2>
+        <p>
+            <?php echo date("D M d, Y G:i a"); ?>
+        </p>
     </div>
 
     
