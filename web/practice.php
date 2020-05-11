@@ -12,7 +12,7 @@ if (empty($_SESSION['cart'])) {
 <head>
     <meta charset="utf-8">
     <script src="cart.js" ></script>
-    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="practice.css">
 </head>
 
 <header>Browse Page</header>
@@ -25,7 +25,7 @@ if (empty($_SESSION['cart'])) {
             <tr>
                 <td>Go-Cart</td>
                 <td class="price">$300.00</td>
-                <td><input value="ADD"> </td>
+                <td><button type="button" onclick="alert('item added')">add</button> </td>
             </tr>
             
             <tr>
