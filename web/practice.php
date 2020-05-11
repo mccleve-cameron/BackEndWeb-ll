@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (empty($_SESSION['cart'])) {
+    $_SESSION['cart'] = array();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -10,25 +18,14 @@
 <header>Browse Page</header>
     
 <body>
-    
-    <h2 style="margin-left: 100px" id="jfv">Enter Information Here</h2>
 
     <form name="valid_form" action="cart.php" method="post">
 
-        <div><input type="text" min="1" name="firstName" placeholder="First Name" required></div>
-
-        <div><input type="text" name="lastName" placeholder="Last Name" required></div>
-
-        <div><input type="text" name="address" placeholder="Address" required></div>
-
-        <div><input type="text" name="phoneNum" id="phone" placeholder="Phone# XXX-XXX-XXXX" onchange="phoneValidate()" ><span id="phoneError" class="error" required></span></div>
-
         <table style="margin: 10px;">
-
             <tr>
                 <td>Go-Cart</td>
                 <td class="price">$300.00</td>
-                <td><input name="cart[]" type="checkbox" id="cart" onclick="checkCart()" value='{"item":"Go-Cart","price":"300"}'></td>
+                <td><input value="ADD"> </td>
             </tr>
             
             <tr>
@@ -54,9 +51,10 @@
                 <td class="price">$10.99</td>
                 <td><input name="cart[]" type="checkbox" id="hat" onclick="checkHat()" value='{"item":"Bucket Hat","price":"10.99"}'></td>
             </tr>
-            <th style="padding-top: 10px; padding-bottom: 10px">Total Price $</th><th id="totalPrice" style="text-align: left">0.00</th>
         </table>
 
+        <div><input type="submit" onsubmit="validate()" value="Submit"> </div>
+        <div><input type="reset" value="Reset"></div>
     </form>
 
 
