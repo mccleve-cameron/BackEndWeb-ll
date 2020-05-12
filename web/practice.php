@@ -53,8 +53,7 @@ if (empty($_SESSION['cart'])) {
             </tr>
         </table>
 
-        <div><input type="submit" onsubmit="validate()" value="Submit"> </div>
-        <div><input type="reset" value="Reset"></div>
+        <div><input type="submit" onsubmit="validate()" value="View Cart"> </div>
     </form>
 
 
