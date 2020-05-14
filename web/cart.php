@@ -22,11 +22,14 @@ if (isset($_POST['removeHat']))
 
 <?php
 foreach($_SESSION as $Key => $Value) {
-    echo "<h2>$Value</h2> <br>";
+    echo "<h2>$Value</h2> <br>";?>
+<form method="POST" action="">
+    <button name="removeHat" value="removeHat">delete</button>
+</form>
+<?php
 }
 ?>
-<form method="POST" action="">
-    <button name="removeHat" value="removeHat">delete</button></form>
+
     <div>
         <button><a href="browse.php">Back to Browse</a></button>
         <button><a href="checkout.php">Continue to Checkout</a></button>
