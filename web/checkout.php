@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+if (isset($_POST['address'])) {
+    $_SESSION['address'] = $_POST['address'];
+}
+
+echo $_SESSION['address'];
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +20,7 @@ session_start();
 
 <header class="softRed">Confirm Your Purchase</header>
 <body>
-    <form method="POST" action="confirm.php">
+    <form method="POST" action="">
         <h3>Enter Your Address</h3>
         <input type="text" name="address" placeholder="address">
         <button><a href="confirm.php" type="submit">Submit</a></button>
