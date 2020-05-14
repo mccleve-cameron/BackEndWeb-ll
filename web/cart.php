@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+if (isset($_POST['removeHat']))
+{
+    unset($_SESSION['hat']);
+}
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +25,8 @@ foreach($_SESSION as $Key => $Value) {
     echo $Value;
 }
 ?>
+<form method="POST" action="">
+    <button name="removeHat" value="removeHat">delete</button></form>
     <div>
         <button><a href="browse.php">Back to Browse</a></button>
         <button><a href="#">Continue to Checkout</a></button>
