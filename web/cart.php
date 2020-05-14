@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-if (isset($_POST['removeHat'])){unset($_SESSION['removeHat']);}
-if (isset($_POST['removeShirt'])){unset($_SESSION['removeShirt']);}
-if (isset($_POST['removeShoes'])){unset($_SESSION['removeShoes']);}
+if (isset($_POST['removeHat'])){unset($_SESSION['hat']);}
+if (isset($_POST['removeShirt'])){unset($_SESSION['shirt']);}
+if (isset($_POST['removeShoes'])){unset($_SESSION['shoes']);}
 
 ?>
 
@@ -26,7 +26,7 @@ foreach($_SESSION as $Key => $Value) {
 }
 ?>
 <form method="POST" action="">
-    <button name="removehat" value="removehat">delete</button>
+    <button name="removeHat" value="removeHat">delete</button>
 </form>
 <form method="POST" action="">
     <button name="removeShirt" value="removeShirt">delete</button>
