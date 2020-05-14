@@ -22,7 +22,8 @@ if (isset($_POST['removeHat']))
 
 <?php
 foreach($_SESSION as $Key => $Value) {
-    echo 'item, '$Value ;
+    echo ?> <h1> <?php $Value; ?> </h1>
+<?php
 }
 ?>
 <form method="POST" action="">
