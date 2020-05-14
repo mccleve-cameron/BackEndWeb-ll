@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +15,14 @@
 
 <header class="softRed">Items in cart</header>
 <body>
+
+<?php
+foreach($_SESSION as $Key => $Value) {
+    echo $Value;
+}
+?>
     <div>
-        <button><a href="browse.html">Back to Browse</a></button>
+        <button><a href="browse.php">Back to Browse</a></button>
         <button><a href="#">Continue to Checkout</a></button>
     </div>
 </body>
