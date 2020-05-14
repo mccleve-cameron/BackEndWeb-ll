@@ -23,10 +23,10 @@ if (isset($_POST['Shoes'])){unset($_SESSION['shoes']);}
 <h3>Manage Your Cart:</h3>
 <?php
 foreach($_SESSION as $Key => $Value) {
-    echo "<h4>$Value</h4>";
-    "<form method='POST' action=''>".
-    "<button name='$Value' value='$Key'>delete $Value</button>".
-    "</form>"
+    echo "<h4>$Value</h4>" .
+    "<form method='POST' action=''>" .
+    "<button name='$Value' value='$Key'>delete $Value</button>" .
+    "</form>";
 }
 ?>
 
