@@ -5,6 +5,13 @@ if (empty($_SESSION['cart'])) {
     $_SESSION['cart'] = array();
 }
 
+if (isset($_POST['hat']))
+{
+    $_SESSION['hat'] = "hat";
+}
+
+echo $_SESSION['hat'];
+
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +30,7 @@ if (empty($_SESSION['cart'])) {
 <main>
     <section>
         <div>Hat</div>
-        <div><button>Add to Cart</button></div>
+        <form method="POST" action=""><button type="submit" name="hat" value="hat">Add to Cart</button></form>
     </section>
     <section>
         <div>Shirt</div>
