@@ -20,7 +20,8 @@ echo $_SESSION['address'];
 
 <header class="softRed">Thanks for Your Purchase!</header>
 <body>
-    
+    <h3>Your order will be shipped to:</h3>
+    <?php echo $_SESSION['address']; ?>
 </body>
 
 <footer class="softRed">

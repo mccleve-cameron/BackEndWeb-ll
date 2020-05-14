@@ -16,7 +16,8 @@ session_start();
 <header class="softRed">Confirm Your Purchase</header>
 <body>
     <form method="POST" action="confirm.php">
-        <input type="text" name="address">
+        <h3>Enter Your Address</h3>
+        <input type="text" name="address" placeholder="address">
         <button><a href="confirm.php" type="submit">Submit</a></button>
     </form>
     <div>
