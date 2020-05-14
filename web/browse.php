@@ -30,7 +30,10 @@ echo $_SESSION['hat'];
 <main>
     <section>
         <div>Hat</div>
-        <form method="POST" action=""><button type="submit" name="hat" value="hat">Add to Cart</button></form>
+        <div><form method="POST" action="">
+            <button type="submit" name="hat" value="hat">Add to Cart</button>
+        </form>
+</div>
     </section>
     <section>
         <div>Shirt</div>
@@ -41,7 +44,7 @@ echo $_SESSION['hat'];
         <div><button>Add to Cart</button></div>
     </section>
 
-    <button><a href="cart.html">View Cart</a></button>
+    <button><a href="cart.php">View Cart</a></button>
 </main>
 
 
