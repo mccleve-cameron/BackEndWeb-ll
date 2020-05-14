@@ -39,4 +39,8 @@ foreach($_SESSION as $Key => $Value) {
         <button><a href="checkout.php">Continue to Checkout</a></button>
     </div>
 </body>
+
+<footer class="softRed">
+        &copy; 2020 | Cameron McCleve | CSE 341
+</footer>
 </html>

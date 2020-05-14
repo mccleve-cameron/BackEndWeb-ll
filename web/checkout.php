@@ -10,7 +10,10 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Checkout</title>
+    <link rel="stylesheet" href="practice.css">
 </head>
+
+<header class="softRed">Confirm Your Purchase</header>
 <body>
     <form method="POST" action="confirm.php">
         <input type="text" name="address">
@@ -20,4 +23,8 @@ session_start();
         <button><a href="cart.php">Back to Cart</a></button>
     </div>
 </body>
+
+<footer class="softRed">
+        &copy; 2020 | Cameron McCleve | CSE 341
+</footer>
 </html>
