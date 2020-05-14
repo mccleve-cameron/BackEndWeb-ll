@@ -14,7 +14,7 @@ session_start();
 <body>
     <form method="POST" action="confirm.php">
         <input type="text" name="address">
-        <button><a href="#" type="submit">Submit</a></button>
+        <button><a href="confirm.php" type="submit">Submit</a></button>
     </form>
     <div>
         <button><a href="cart.php">Back to Cart</a></button>
