@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-if (isset($_POST['hat'])){unset($_SESSION['hat']);}
-if (isset($_POST['shirt'])){unset($_SESSION['shirt']);}
-if (isset($_POST['shoes'])){unset($_SESSION['shoes']);}
+if (isset($_POST['removeHat'])){unset($_SESSION['removeHat']);}
+if (isset($_POST['removeShirt'])){unset($_SESSION['removeShirt']);}
+if (isset($_POST['removeShoes'])){unset($_SESSION['removeShoes']);}
 
 ?>
 
@@ -22,14 +22,18 @@ if (isset($_POST['shoes'])){unset($_SESSION['shoes']);}
 
 <?php
 foreach($_SESSION as $Key => $Value) {
-    echo ("<h2>$Value</h2> <br>"; + "
-<form method="POST" action="">
-    <button name="$Key" value="$Value">delete</button>
-</form>")
-
+    echo "<h2>$Value</h2> <br>";
 }
 ?>
-
+<form method="POST" action="">
+    <button name="removehat" value="removehat">delete</button>
+</form>
+<form method="POST" action="">
+    <button name="removeShirt" value="removeShirt">delete</button>
+</form>
+<form method="POST" action="">
+    <button name="removeShoes" value="removeShoes">delete</button>
+</form>
     <div>
         <button><a href="browse.php">Back to Browse</a></button>
         <button><a href="checkout.php">Continue to Checkout</a></button>
