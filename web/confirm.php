@@ -25,7 +25,7 @@ echo $_SESSION['address'];
         <?php
         foreach($_SESSION as $Key => $Value) {
             if($Key != "address"){
-            echo "<li>$Value</li>" . "<li>$Key</li>";
+            echo "<li>$Value</li>";
             }
         }
         ?>
