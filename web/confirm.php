@@ -24,7 +24,9 @@ echo $_SESSION['address'];
     <ul>
         <?php
         foreach($_SESSION as $Key => $Value) {
+            if($_SESSION[$Value] != 'address'){
             echo "<li>$Value</li>";
+            }
         }
         ?>
     </ul>
