@@ -5,9 +5,9 @@ if (empty($_SESSION['cart'])) {
     //$_SESSION['cart'] = array();
 }
 
-if (isset($_POST['hat'])) {$_SESSION['hat'] = "hat";}
-if (isset($_POST['shirt'])) {$_SESSION['shirt'] = "shirt";}
-if (isset($_POST['shoes'])) {$_SESSION['shoes'] = "shoes";}
+if (isset($_POST['hat'])) {$_SESSION['hat'] = "Hat";}
+if (isset($_POST['shirt'])) {$_SESSION['shirt'] = "Shirt";}
+if (isset($_POST['shoes'])) {$_SESSION['shoes'] = "Shoes";}
 
 ?>
 
