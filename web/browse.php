@@ -21,6 +21,7 @@ echo $_SESSION['hat'];
     <meta charset="utf-8">
     <script src="cart.js" ></script>
     <link rel="stylesheet" href="practice.css">
+    <title>Browse</title>
 </head>
 
 <header class="softRed">Browse Page</header>
