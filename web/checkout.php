@@ -23,7 +23,7 @@ echo $_SESSION['address'];
     <form method="POST" action="confirm.php">
         <h3>Enter Your Address</h3>
         <input type="text" name="address" placeholder="address">
-        <button type="submit"><a href="confirm.php">Submit</a></button>
+        <button type="submit">Submit</button>
     </form>
     <div>
         <button><a href="cart.php">Back to Cart</a></button>
