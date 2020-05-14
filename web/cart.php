@@ -29,7 +29,7 @@ foreach($_SESSION as $Key => $Value) {
     <button name="removeHat" value="removeHat">delete</button></form>
     <div>
         <button><a href="browse.php">Back to Browse</a></button>
-        <button><a href="#">Continue to Checkout</a></button>
+        <button><a href="checkout.php">Continue to Checkout</a></button>
     </div>
 </body>
 </html>
