@@ -21,7 +21,8 @@ echo $_SESSION['address'];
 <header class="softRed">Thanks for Your Purchase!</header>
 <body>
     <h3>Your items...</h3>
-    <ul class="items">
+    <div>
+    <ul>
         <?php
         foreach($_SESSION as $Key => $Value) {
             if($Key != "address"){
@@ -30,8 +31,11 @@ echo $_SESSION['address'];
         }
         ?>
     </ul>
+    </div>
     <h3>...will be shipped to:</h3>
+    <div>
     <?php echo $_SESSION['address']; ?>
+    </div>
 </body>
 
 <footer class="softRed">

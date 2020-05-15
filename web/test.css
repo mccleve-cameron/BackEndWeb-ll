@@ -3,6 +3,7 @@ header {
     font-size: 18pt;
 }
 div {
+    display: inline-block;
     margin: 10px;
     padding: 10px;
     width: 30%;
@@ -26,13 +27,6 @@ footer {
 
 button a{
     text-decoration: none;
-}
-
-.items {
-    border: 1px solid black;
-    width: min-content;
-    display: inline-block;
-    padding: 10px;
 }
 
 .softRed {
