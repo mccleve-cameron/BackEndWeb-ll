@@ -1,27 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Confirm</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="test.css">
 </head>
 
-<header class="softRed">Thanks for Your Purchase!</header>
+<header class="softRed">Items in cart</header>
 <body>
-    <h3>Your items...</h3>
-    <div class="items">
-        <ul class="list">
-            <li>hat</li>
-            <li>hat</li>
-            <li>iuhiweuhiweho</li>
-            <li>hat</li>
-        </ul>
+
+<h3>Manage Your Cart:</h3>
+<div class="cart">
+    <h4>$Value</h4>
+    <form method='POST' action=''>
+    <button name='$Value' value='$Key'>delete $Value</button>
+    </form>
     </div>
-    <h3>...will be shipped to:</h3>
-    <!--<?php echo $_SESSION['address']; ?>-->
-    <div>129 w 4th south 5151949</div>
+
+
+
+    <div>
+        <button><a href="browse.php">Back to Browse</a></button>
+        <button><a href="checkout.php">Continue to Checkout</a></button>
+    </div>
 </body>
 
 <footer class="softRed">
