@@ -31,6 +31,12 @@ button a{
     text-decoration: none;
 }
 
+input {
+    margin: 10px;
+    width: 250px;
+    display: block;
+}
+
 .softRed {
     color: white;
     border-radius: 3px;
