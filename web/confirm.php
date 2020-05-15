@@ -13,7 +13,6 @@ function sanitize($input) {
         return $value;
     }
     else { return "";}
-    }
 }
 
 if (isset($_POST['address'])) {
