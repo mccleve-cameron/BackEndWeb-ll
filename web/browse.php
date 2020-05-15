@@ -50,6 +50,30 @@ if (isset($_POST['shoes'])) {$_SESSION['shoes'] = "Shoes";}
                 </form>
             </div>
         </section>
+        <section>
+            <div>Basketball</div>
+            <div>
+                <form method="POST" action="">
+                    <button type="submit" name="basketball" value="basketball">Add to Cart</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <div>Diapers</div>
+            <div>
+                <form method="POST" action="">
+                    <button type="submit" name="diapers" value="diapers">Add to Cart</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <div>Couch</div>
+            <div>
+                <form method="POST" action="">
+                    <button type="submit" name="couch" value="couch">Add to Cart</button>
+                </form>
+            </div>
+        </section>
 
         <button><a href="cart.php">View Cart</a></button>
     </main>

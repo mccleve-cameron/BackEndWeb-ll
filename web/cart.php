@@ -4,6 +4,9 @@ session_start();
 if (isset($_POST['Hat'])){unset($_SESSION['hat']);}
 if (isset($_POST['Shirt'])){unset($_SESSION['shirt']);}
 if (isset($_POST['Shoes'])){unset($_SESSION['shoes']);}
+if (isset($_POST['Basketball'])){unset($_SESSION['basketball']);}
+if (isset($_POST['Diapers'])){unset($_SESSION['diapers']);}
+if (isset($_POST['Couch'])){unset($_SESSION['couch']);}
 
 ?>
 
