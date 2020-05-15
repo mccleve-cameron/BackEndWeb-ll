@@ -1,7 +1,8 @@
 <?php
 session_start();
 
-$_SESSION['address'] = "";
+if (isset($_SESSION['address']))
+{unset($_SESSION['address']);}
 
 if (isset($_POST['Hat'])){unset($_SESSION['hat']);}
 if (isset($_POST['Shirt'])){unset($_SESSION['shirt']);}
