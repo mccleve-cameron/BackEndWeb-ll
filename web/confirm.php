@@ -1,10 +1,7 @@
 <?php
 session_start();
 
-$address = sanitize('address');
-$_SESSION['address'] = $address;
-
-function sanitize($input) {
+/*function sanitize($input) {
     if (isset($_POST[$input])) {
         $value = $_POST[$input];
         $value = trim($value);
@@ -13,10 +10,10 @@ function sanitize($input) {
         return $value;
     }
     else { return "";}
-}
+}*/
 
 if (isset($_POST['address'])) {
-    $_SESSION['address'] = $_POST['address'];
+    $_SESSION['address'] = htmlspecialchars($_POST['address']);
 }
 ?>
 
