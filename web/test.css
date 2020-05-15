@@ -29,6 +29,16 @@ button a{
     text-decoration: none;
 }
 
+#test {
+
+    text-decoration: none;
+}
+
+#test:visited {
+ color: turquoise;
+    
+}
+
 input {
     margin: 10px;
     width: 250px;
