@@ -8,6 +8,9 @@ if (empty($_SESSION['cart'])) {
 if (isset($_POST['hat'])) {$_SESSION['hat'] = "Hat";}
 if (isset($_POST['shirt'])) {$_SESSION['shirt'] = "Shirt";}
 if (isset($_POST['shoes'])) {$_SESSION['shoes'] = "Shoes";}
+if (isset($_POST['basketball'])) {$_SESSION['basketball'] = "Basketball";}
+if (isset($_POST['diapers'])) {$_SESSION['diapers'] = "Diapers";}
+if (isset($_POST['couch'])) {$_SESSION['couch'] = "Couch";}
 
 ?>
 
