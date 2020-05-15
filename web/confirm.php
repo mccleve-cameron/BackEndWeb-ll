@@ -1,17 +1,6 @@
 <?php
 session_start();
 
-/*function sanitize($input) {
-    if (isset($_POST[$input])) {
-        $value = $_POST[$input];
-        $value = trim($value);
-        $value = stripslashes($value);
-        $value = htmlspecialchars($value);
-        return $value;
-    }
-    else { return "";}
-}*/
-
 if (isset($_POST['address'])) {
     $_SESSION['address'] = htmlspecialchars($_POST['address']);
 }

@@ -7,6 +7,12 @@ if (isset($_POST['Shoes'])){unset($_SESSION['shoes']);}
 if (isset($_POST['Basketball'])){unset($_SESSION['basketball']);}
 if (isset($_POST['Diapers'])){unset($_SESSION['diapers']);}
 if (isset($_POST['Couch'])){unset($_SESSION['couch']);}
+if (isset($_POST['Doll'])){unset($_SESSION['doll']);}
+if (isset($_POST['Tree'])){unset($_SESSION['tree']);}
+if (isset($_POST['Pants'])){unset($_SESSION['pants']);}
+if (isset($_POST['Movie'])){unset($_SESSION['movie']);}
+if (isset($_POST['Xbox'])){unset($_SESSION['xbox']);}
+if (isset($_POST['Soda'])){unset($_SESSION['soda']);}
 
 ?>
 

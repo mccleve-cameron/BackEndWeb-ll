@@ -11,6 +11,12 @@ if (isset($_POST['shoes'])) {$_SESSION['shoes'] = "Shoes";}
 if (isset($_POST['basketball'])) {$_SESSION['basketball'] = "Basketball";}
 if (isset($_POST['diapers'])) {$_SESSION['diapers'] = "Diapers";}
 if (isset($_POST['couch'])) {$_SESSION['couch'] = "Couch";}
+if (isset($_POST['doll'])) {$_SESSION['doll'] = "Doll";}
+if (isset($_POST['tree'])) {$_SESSION['tree'] = "Tree";}
+if (isset($_POST['pants'])) {$_SESSION['pants'] = "Pants";}
+if (isset($_POST['movie'])) {$_SESSION['movie'] = "Movie";}
+if (isset($_POST['xbox'])) {$_SESSION['xbox'] = "Xbox";}
+if (isset($_POST['soda'])) {$_SESSION['soda'] = "Soda";}
 
 ?>
 
@@ -74,6 +80,54 @@ if (isset($_POST['couch'])) {$_SESSION['couch'] = "Couch";}
             <div>
                 <form method="POST" action="">
                     <button type="submit" name="couch" value="couch">Add to Cart</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <div>Doll</div>
+            <div>
+                <form method="POST" action="">
+                    <button type="submit" name="doll" value="doll">Add to Cart</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <div>Tree</div>
+            <div>
+                <form method="POST" action="">
+                    <button type="submit" name="tree" value="tree">Add to Cart</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <div>Pants</div>
+            <div>
+                <form method="POST" action="">
+                    <button type="submit" name="pants" value="pants">Add to Cart</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <div>Movie</div>
+            <div>
+                <form method="POST" action="">
+                    <button type="submit" name="movie" value="movie">Add to Cart</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <div>Xbox</div>
+            <div>
+                <form method="POST" action="">
+                    <button type="submit" name="xbox" value="xbox">Add to Cart</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <div>Soda</div>
+            <div>
+                <form method="POST" action="">
+                    <button type="submit" name="soda" value="soda">Add to Cart</button>
                 </form>
             </div>
         </section>
