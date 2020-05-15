@@ -14,7 +14,7 @@ if (isset($_POST['address'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Checkout</title>
-    <link rel="stylesheet" href="practice.css">
+    <link rel="stylesheet" href="cart.css">
 </head>
 
 <header class="softRed">Confirm Your Purchase</header>

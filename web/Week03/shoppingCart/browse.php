@@ -26,7 +26,7 @@ if (isset($_POST['soda'])) {$_SESSION['soda'] = "Soda";}
 <head>
     <meta charset="utf-8">
     <script src="cart.js"></script>
-    <link rel="stylesheet" href="practice.css">
+    <link rel="stylesheet" href="cart.css">
     <title>Browse</title>
 </head>
 

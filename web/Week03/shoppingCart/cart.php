@@ -23,7 +23,7 @@ if (isset($_POST['Soda'])){unset($_SESSION['soda']);}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cart</title>
-    <link rel="stylesheet" href="practice.css">
+    <link rel="stylesheet" href="cart.css">
 </head>
 
 <header class="softRed">Items in cart</header>
