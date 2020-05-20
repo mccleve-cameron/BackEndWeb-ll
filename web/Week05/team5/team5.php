@@ -29,10 +29,10 @@
       die();
     }
 
-    foreach ($db->query('SELECT username, password FROM note_user') as $row)
+    foreach ($db->query('SELECT book, password FROM team5.scriptures') as $row)
     {
-        echo 'user: ' . $row['username'];
-        echo ' password: ' . $row['password'];
+        echo 'book: ' . $row['book'];
+        //echo ' password: ' . $row['password'];
         echo '<br/>';
     }
     ?>
