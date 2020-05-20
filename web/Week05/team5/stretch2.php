@@ -1,3 +1,8 @@
+<?php
+require "dbConnect.php";
+$db = get_db();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,32 +14,17 @@
 <header><h1>Stretch Challenge #2</h1></header>
 <body>
     <?php
-    try
-    {
-      $dbUrl = getenv('DATABASE_URL');
-    
-      $dbOpts = parse_url($dbUrl);
-    
-      $dbHost = $dbOpts["host"];
-      $dbPort = $dbOpts["port"];
-      $dbUser = $dbOpts["user"];
-      $dbPassword = $dbOpts["pass"];
-      $dbName = ltrim($dbOpts["path"],'/');
-    
-      $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-    
-      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }
-    catch (PDOException $ex)
-    {
-      echo 'Error!: ' . $ex->getMessage();
-      die();
-    }
+    $statement = $db->prepare("SELECT book, chapter, verse, content FROM team5.scriptures");
+    $statement->execute();
 
-    foreach ($db->query('SELECT book, chapter, verse, content FROM team5.scriptures') as $row)
+    while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     {
-        $book = $row['book']
-        echo $book;
+        $book = $row['book'];
+        $chapter = $row['chapter'];
+        $verse = $row['verse'];
+        $content = $row['content'];
+
+        echo "<p><strong>$book $chapter:$verse</strong> - \"$content\"<p>";
     }
     ?>
 </body>
