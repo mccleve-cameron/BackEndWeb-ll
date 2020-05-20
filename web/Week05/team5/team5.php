@@ -33,7 +33,7 @@
 
     foreach ($db->query('SELECT book, chapter, verse FROM team5.scriptures') as $row)
     {
-        echo '<span>' . $row['book'] . ' ' 
+        echo '<span class="title">' . $row['book'] . ' ' 
         . $row['chapter'] . ':' . $row['verse'] . '</span><br/>';
     }
     ?>
