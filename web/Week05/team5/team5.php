@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="team5.css">
 </head>
+<header><h1>Scripture Resources</h1></header>
 <body>
     <?php
     try
@@ -29,10 +31,11 @@
       die();
     }
 
-    foreach ($db->query('SELECT book, chapter FROM team5.scriptures') as $row)
+    foreach ($db->query('SELECT book, chapter, verse FROM team5.scriptures') as $row)
     {
         echo 'book: ' . $row['book'];
         echo ' chap: ' . $row['chapter'];
+        echo ' verse: ' . $row['verse'];
         echo '<br/>';
     }
     ?>
