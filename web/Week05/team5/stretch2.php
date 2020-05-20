@@ -31,13 +31,10 @@
       die();
     }
 
-    $i = 0;
     foreach ($db->query('SELECT book, chapter, verse, content FROM team5.scriptures') as $row)
     {
-        $book[$i] = $row['book']
-        echo $book[$i];
-    
-        $i++;
+        $book = $row['book']
+        echo $book;
     }
     ?>
 </body>
