@@ -31,11 +31,14 @@
       die();
     }
 
-    foreach ($db->query('SELECT book, chapter, verse FROM team5.scriptures') as $row)
+    foreach ($db->query('SELECT book, chapter, verse, content FROM team5.scriptures') as $row)
     {
-        echo '<span class="title">' . $row['book'] . ' ' 
-        . $row['chapter'] . ':' . $row['verse'] . '</span><br/>';
+        echo '<p><span class="title">' . $row['book'] . ' ' 
+        . $row['chapter'] . ':' . $row['verse'] . '</span>' . $row['content'] . '</p>';
     }
     ?>
+
+<p><span class="title">John 3:16 -</span> "For God so loved the world, that he gave his only begotten Son, 
+        that whosoever believeth in him should not perish, but have everlasting life."</p>
 </body>
 </html>
