@@ -33,9 +33,9 @@
 
     foreach ($db->query('SELECT book, chapter, verse FROM team5.scriptures') as $row)
     {
-        echo 'book: ' . $row['book'];
-        echo ' chap: ' . $row['chapter'];
-        echo ' verse: ' . $row['verse'];
+        echo $row['book'];
+        echo ' ' . $row['chapter'];
+        echo ':' . $row['verse'];
         echo '<br/>';
     }
     ?>
