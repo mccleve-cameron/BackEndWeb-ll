@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="team5.css">
 </head>
-<header><h1>Scripture Resources</h1></header>
+<header><h1>Stretch Challenge #2</h1></header>
 <body>
     <?php
     try
@@ -31,10 +31,13 @@
       die();
     }
 
+    $i = 0;
     foreach ($db->query('SELECT book, chapter, verse, content FROM team5.scriptures') as $row)
     {
-        echo '<p><span class="title">' . $row['book'] . ' ' 
-        . $row['chapter'] . ':' . $row['verse'] . '</span> - "' . $row['content'] . '"</p>';
+        $book[$i] = $row['book']
+        echo $book[$i];
+    
+        $i++;
     }
     ?>
 </body>
