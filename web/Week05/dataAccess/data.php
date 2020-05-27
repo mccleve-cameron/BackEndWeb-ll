@@ -34,6 +34,12 @@
         echo '<p>' . $row['username'] . ' - ' 
         . $row['password'] . '"</p>';
     }
+
+    foreach ($db->query('SELECT goal_text, is_complete, goal_date FROM goals') as $row)
+    {
+        echo '<p>' . $row['goal_date'] . ' - ' 
+        . $row['goal_text'] . ' - '. $row['is_complete'] . '"</p>';
+    }
     ?>
 </body>
 </html>
