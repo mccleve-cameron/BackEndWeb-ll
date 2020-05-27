@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
 <?php
     try
     {
@@ -28,6 +20,20 @@
       echo 'Error!: ' . $ex->getMessage();
       die();
     }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoHabit</title>
+</head>
+<header><h1>GoHabit</h1></header>
+<body>
+    <h3>Search for a Username</h3>
+    <input id="search" type="search" placeholder="username">
+<?php
 
     foreach ($db->query('SELECT username, password FROM users') as $row)
     {
