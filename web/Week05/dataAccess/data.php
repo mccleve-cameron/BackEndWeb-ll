@@ -1,24 +1,18 @@
 <?php
-    try
+    require('dbConnect.php');
+    
+    session_start();
+    
+    foreach ($db->query('SELECT username, password FROM users') as $row)
     {
-      $dbUrl = getenv('DATABASE_URL');
-    
-      $dbOpts = parse_url($dbUrl);
-    
-      $dbHost = $dbOpts["host"];
-      $dbPort = $dbOpts["port"];
-      $dbUser = $dbOpts["user"];
-      $dbPassword = $dbOpts["pass"];
-      $dbName = ltrim($dbOpts["path"],'/');
-    
-      $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-    
-      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $_SESSION[username] = $row['username']
+        $row['password']
     }
-    catch (PDOException $ex)
+
+    foreach ($db->query('SELECT goal_text, is_complete, goal_date FROM goals') as $row)
     {
-      echo 'Error!: ' . $ex->getMessage();
-      die();
+        echo '<p>' . $row['goal_date'] . ' - ' 
+        . $row['goal_text'] . ' - '. $row['is_complete'] . '"</p>';
     }
 ?>
 
@@ -35,17 +29,6 @@
     <input id="search" type="search" placeholder="username">
 <?php
 
-    foreach ($db->query('SELECT username, password FROM users') as $row)
-    {
-        echo '<p>' . $row['username'] . ' - ' 
-        . $row['password'] . '"</p>';
-    }
-
-    foreach ($db->query('SELECT goal_text, is_complete, goal_date FROM goals') as $row)
-    {
-        echo '<p>' . $row['goal_date'] . ' - ' 
-        . $row['goal_text'] . ' - '. $row['is_complete'] . '"</p>';
-    }
     ?>
 </body>
 </html>
