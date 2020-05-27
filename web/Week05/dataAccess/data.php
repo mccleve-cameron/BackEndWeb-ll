@@ -25,8 +25,8 @@
     
     foreach ($db->query('SELECT username, password FROM users') as $row)
     {
-        $_SESSION[username] = $row['username']
-        $row['password']
+        echo '<p>' . $row['username'] . ' - ' 
+        . $row['password'] . '"</p>';
     }
 
     foreach ($db->query('SELECT goal_text, is_complete, goal_date FROM goals') as $row)
