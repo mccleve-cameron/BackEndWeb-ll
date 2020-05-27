@@ -25,6 +25,16 @@ CREATE TABLE habits (
     user_id INT NOT NULL REFERENCES users(id)
 );
 
+INSERT INTO users VALUES (DEFAULT, 'Bob', 'bob1');
+INSERT INTO users VALUES (DEFAULT,'John', 'john1');
+INSERT INTO users VALUES (DEFAULT,'Sue', 'sue1');
+
+--inserts using todays date
+INSERT INTO goals VALUES (DEFAULT, 'take out trash', FALSE, CURRENT_DATE, 1);
+--inserts using manual date
+INSERT INTO goals VALUES (DEFAULT, 'wash dishes', FALSE, '2020-05-23', 1);
+INSERT INTO goals VALUES (DEFAULT, 'clean room', FALSE, '2020-05-24', 2);
+INSERT INTO goals VALUES (DEFAULT, 'clean room', FALSE, '2020-05-20', 3);
 
 SELECT * FROM users;
 SELECT * FROM goals;
