@@ -20,7 +20,7 @@
       echo 'Error!: ' . $ex->getMessage();
       die();
     }
-    
+
     session_start();
     
     foreach ($db->query('SELECT username, password FROM users') as $row)
