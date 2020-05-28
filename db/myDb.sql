@@ -36,6 +36,14 @@ INSERT INTO goals VALUES (DEFAULT, 'wash dishes', FALSE, '2020-05-23', 1);
 INSERT INTO goals VALUES (DEFAULT, 'clean room', FALSE, '2020-05-24', 2);
 INSERT INTO goals VALUES (DEFAULT, 'clean room', FALSE, '2020-05-20', 3);
 
+SELECT * FROM users AS u 
+JOIN goals AS g 
+ON u.id = g.user_id;
+
+SELECT * FROM users WHERE username='John' 
+JOIN goals
+ON users.id = goals.user_id;
+
 SELECT * FROM users;
 SELECT * FROM goals;
 SELECT * FROM habits;

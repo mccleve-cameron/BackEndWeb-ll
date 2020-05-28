@@ -23,7 +23,10 @@
 
     session_start();
 
-    $stmt = $db->prepare("SELECT id, username, password FROM users WHERE username='John'");
+    $stmt = $db->prepare("SELECT * FROM users AS u 
+JOIN goals AS g 
+ON u.id = g.user_id
+WHERE username='John';");
     $stmt->execute();
     $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -45,8 +48,11 @@
         $id = $user['id'];
         $username = $user['username'];
         $password = $user['password'];
+        $goal = $user['goal_text'];
+        $complete = $user['is_complete'];
+        $date = $user['goal_date'];
 
-        echo "<p>$id - $username - $password</p>";
+        echo "<p>$id - $username - $password - $goal - $complete - $date</p>";
     }
     ?>
 </body>
