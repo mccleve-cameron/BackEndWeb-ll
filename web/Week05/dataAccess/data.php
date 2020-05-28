@@ -52,7 +52,7 @@ for ()
         echo "<p>-------</p>";
     }
 
-    echo $userArray[1]['id'];
+    echo $userArray[1];
     ?>
 </body>
 </html>
