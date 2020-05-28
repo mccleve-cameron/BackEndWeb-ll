@@ -49,6 +49,7 @@
         echo "<p>$id - $username</p>";
     }
 
+    echo $data[0];
     ?>
 </body>
 </html>
