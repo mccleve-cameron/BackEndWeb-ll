@@ -7,8 +7,11 @@
 </head>
 <header><h1>GoHabit</h1></header>
 <body>
-<h3>Search for a Username</h3><button type="submit" action="display.php" id="search">Search</button>
+<h3>Search for a Username</h3>
+<form method="GET" action="display.php">
+<button type="submit" id="search">Search</button>
     <input id="uInput" type="search" placeholder="username">
+</form>
 
 
         <script>
