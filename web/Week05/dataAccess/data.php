@@ -1,6 +1,7 @@
 <?php
     session_start();
-    $_SESSION['username'] = $_GET['uInput'].value;
+    
+    $_SESSION['username'] = $_GET['uInput'];
 ?>
 
 <!DOCTYPE html>
@@ -23,8 +24,10 @@
 
     function display() {
         const username = document.getElementById('uInput').value;
-        console.log(username);
+
     }
+
+
 </script>
 </body>
 </html>
