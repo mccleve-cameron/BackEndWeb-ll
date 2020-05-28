@@ -14,12 +14,10 @@
         }
     }
 
-
-
     $stmt = $db->prepare("SELECT * FROM users AS u 
                     JOIN goals AS g 
                     ON u.id = g.user_id
-                    WHERE username=':name';");
+                    WHERE username=:name");
     $stmt->bindValue(':name', $name, PDO::PARAM_STR);
 
     $stmt->execute();
