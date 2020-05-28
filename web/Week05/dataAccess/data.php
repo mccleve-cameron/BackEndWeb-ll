@@ -41,11 +41,12 @@
     <input id="search" type="search" placeholder="username">
 
 <?php
+    foreach ($users as $user){
+        $id = $user['id'];
+        $username = $user['username'];
 
-    while ($row = $users) {
-        echo $row['username'];
+        echo "<p>$id - $username</p>";
     }
-
     ?>
 </body>
 </html>
