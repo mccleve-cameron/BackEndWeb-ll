@@ -16,7 +16,7 @@
 <header><h1>GoHabit</h1></header>
 <body>
 <h3>Search for a Username</h3>
-<form method="GET" action="">
+<form method="GET" action="data.php">
 <button type="submit" id="search"  name="search">Search</button>
     <input id="uInput" type="search" name="uInput" placeholder="username">
 </form>
