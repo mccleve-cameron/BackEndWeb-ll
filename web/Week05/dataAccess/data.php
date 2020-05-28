@@ -39,18 +39,23 @@
 <body>
     <h3>Search for a Username</h3>
     <input id="search" type="search" placeholder="username">
+    <script>
+        class User {
+            constructor(id, username) {
+                this.Id = id,
+                this.Username = username
+            }
+        }
+    </script>
 <?php
 
-
-    foreach ($users as $user){
-        $_SESSION['id'] = $user['id'];
-        $id = $user['id'];
-        $username = $user['username'];
+    foreach ($users as User){
+        User.id = $user['id'];
+        User.username = $user['username'];
 
         echo "<p>$id - $username</p>";
     }
-
-    echo $_SESSION['id'];
+    
     ?>
 </body>
 </html>
