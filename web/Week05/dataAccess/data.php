@@ -23,7 +23,7 @@
 
     session_start();
 
-    $stmt = $db->prepare('SELECT id, username FROM users WHERE username="John"');
+    $stmt = $db->prepare("SELECT id, username FROM users WHERE username='John");
     $stmt->execute();
     $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
