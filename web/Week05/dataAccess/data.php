@@ -25,6 +25,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoHabit</title>
+    <link rel="stylesheet" href="data.css">
 </head>
 <header><h1>GoHabit</h1></header>
 <body>
@@ -33,7 +34,10 @@
     <input id="uInput" type="search" name="uInput" placeholder="username">
     <button type="submit" id="search"  name="search">Search</button>
 </form>
-<h2>Bob's Goals</h2>
+<h2><?php     
+    $username = $users[0]['username'];
+    echo $username;
+ ?> 's Goals</h2>
     <table>
         <tr>
             <th>Date</th>
@@ -41,9 +45,6 @@
             <th>Status</th>
         </tr>
 <?php
-    $username = $users[0]['username'];
-    echo $username;
-
     foreach ($users as $user){
         $id = $user['id'];
         $username = $user['username'];
