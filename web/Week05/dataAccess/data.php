@@ -22,18 +22,10 @@
     }
 
     session_start();
-    
-    foreach ($db->query('SELECT username, password FROM users') as $row)
-    {
-        echo '<p>' . $row['username'] . ' - ' 
-        . $row['password'] . '"</p>';
-    }
 
-    foreach ($db->query('SELECT goal_text, is_complete, goal_date FROM goals') as $row)
-    {
-        echo '<p>' . $row['goal_date'] . ' - ' 
-        . $row['goal_text'] . ' - '. $row['is_complete'] . '"</p>';
-    }
+    $stmt = $db->prepare('SELECT id, username FROM users');
+    $stmt->execute();
+    $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +40,12 @@
     <h3>Search for a Username</h3>
     <input id="search" type="search" placeholder="username">
 <?php
+    foreach ($users as $user){
+        $id = $users['id'];
+        $username = $['username'];
 
+        echo "<p>$id - $username</p>";
+    }
     ?>
 </body>
 </html>
