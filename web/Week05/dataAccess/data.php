@@ -3,15 +3,10 @@
     require "../../dbConnect.php";
     $db = getDb();
 
-    if (isset($_GET['uInput'])) {
-        
+    $name = 'John';
+    if (isset($_GET['uInput'])) { 
         $_SESSION['username'] = $_GET['uInput'];
-        if (isset($_SESSION['username'])) {
-            $name = $_SESSION['username'];
-        }
-        else {
-            $name = 'John';
-        }
+        $name = $_SESSION['username'];
     }
 
     $stmt = $db->prepare("SELECT * FROM users AS u 
@@ -47,6 +42,12 @@
         $complete = $user['is_complete'];
         $date = $user['goal_date'];
 
+        if ($complete) {
+            $complete = 'completed';
+        }
+        else {
+            $complete = 'not done';
+        }
         echo "<p>$id - $username - $password - $goal - $complete - $date</p>";
     }
     
