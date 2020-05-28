@@ -42,7 +42,7 @@
 
 <?php
 
-$userArray[];
+$userArray = array();
 
     foreach ($users as $user){
         $userArray[] = $user;
@@ -50,7 +50,7 @@ $userArray[];
         echo "<p>-------</p>";
     }
 
-    echo $userArray[1];
+
     ?>
 </body>
 </html>
