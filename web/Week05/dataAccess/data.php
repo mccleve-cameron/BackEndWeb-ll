@@ -41,10 +41,10 @@
     <input id="search" type="search" placeholder="username">
 <?php
     foreach ($users as $user){
-        $id = $users['id'];
-        $username = $['username'];
+        $id = $user['id'];
+        $username = $user['username'];
 
-        //echo "<p>$id - $username</p>";
+        echo "<p>$id - $username</p>";
     }
     ?>
 </body>
