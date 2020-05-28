@@ -6,6 +6,12 @@
     if (isset($_GET['uInput'])) {
         
         $_SESSION['username'] = $_GET['uInput'];
+        if (isset($_SESSION['username'])) {
+            $name = $_SESSION['username'];
+        }
+        else {
+            $name = 'John';
+        }
     }
 
 
@@ -13,7 +19,9 @@
     $stmt = $db->prepare("SELECT * FROM users AS u 
                     JOIN goals AS g 
                     ON u.id = g.user_id
-                    WHERE username='John';");
+                    WHERE username=':name';");
+    $stmt->bindValue(':name', $name, PDO::PARAM_STR);
+
     $stmt->execute();
     $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
