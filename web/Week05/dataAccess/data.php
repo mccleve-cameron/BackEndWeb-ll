@@ -30,9 +30,16 @@
 <body>
 <h3>Search for a Username</h3>
 <form method="GET" action="data.php">
-<button type="submit" id="search"  name="search">Search</button>
     <input id="uInput" type="search" name="uInput" placeholder="username">
+    <button type="submit" id="search"  name="search">Search</button>
 </form>
+<h2>Bob's Goals</h2>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Goal</th>
+            <th>Status</th>
+        </tr>
 <?php
     $username = $users[0]['username'];
     echo $username;
@@ -51,19 +58,14 @@
         else {
             $complete = 'not done';
         }
-        echo "<p>$goal - $complete - $date</p>";
+        echo( 
+        "<tr>
+            <td>$date</td>
+            <td>$goal</td>
+            <td>$complete</td>
+        </tr>";)
     }
     
 ?>
-<script>
-    const username = document.querySelector("#search").addEventListener('click', display);
-
-    function display() {
-        const username = document.getElementById('uInput').value;
-
-    }
-
-
-</script>
 </body>
 </html>

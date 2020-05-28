@@ -4,17 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoHabitTest</title>
+    <link rel="stylesheet" href="test.css">
 </head>
 <header><h1>GoHabit</h1></header>
 <body>
-    <h3>Search for a Username</h3><button id="search">Search</button>
-    <input id="uInput" type="search" placeholder="username">
+    <h3>Search for a Username</h3>
+    <input id="uInput" type="search" placeholder="username"><button id="search">Search</button>
+    <h2>Bob's Goals</h2>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Goal</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>2020-05-12</td>
+            <td>take out trash</td>
+            <td>done</td>
+        </tr>
+        <tr>
+            <td>2020-05-12</td>
+            <td>take out trash</td>
+            <td>done</td>
+        </tr>
+        <tr>
+            <td>2020-05-12</td>
+            <td>take out trash</td>
+            <td>done</td>
+        </tr>
+    </table>
     <script>
         const username = document.querySelector("#search").addEventListener('click', display);
 
         function display() {
             const username = document.getElementById('uInput').value;
-
             console.log(username);
         }
     </script>
