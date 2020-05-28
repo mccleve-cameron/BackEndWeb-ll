@@ -42,15 +42,10 @@
 
 <?php
 
-$userArray = array();
-
-    foreach ($users as $user){
-        $userArray[] = $user;
-
-        echo "<p>-------</p>";
+    while ($row = $users) {
+        echo $row['username'];
     }
 
-    echo $userArray;
     ?>
 </body>
 </html>
