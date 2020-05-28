@@ -40,6 +40,7 @@
     <h3>Search for a Username</h3>
     <input id="search" type="search" placeholder="username">
 <?php
+    var_dump($users);
     foreach ($users as $user){
         $id = $user['id'];
         $username = $user['username'];
