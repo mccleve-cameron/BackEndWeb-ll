@@ -57,6 +57,6 @@ WHERE username='John';");
         $date = $user['goal_date'];
 
         echo "<p>$id - $username - $password - $goal - $complete - $date</p>";
-    }*/
+    }
     
 ?>
