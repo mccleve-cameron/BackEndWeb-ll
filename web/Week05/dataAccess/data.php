@@ -39,6 +39,13 @@
 <body>
     <h3>Search for a Username</h3>
     <input id="search" type="search" placeholder="username">
+<?php
+    foreach ($users as $user){
+        $id = $users['id'];
+        $username = $['username'];
 
+        //echo "<p>$id - $username</p>";
+    }
+    ?>
 </body>
 </html>
