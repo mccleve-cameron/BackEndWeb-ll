@@ -1,6 +1,6 @@
 <?php
     session_start();
-
+    $_SESSION['username'] = $_GET['uInput'].value;
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@
 <header><h1>GoHabit</h1></header>
 <body>
 <h3>Search for a Username</h3>
-<form method="GET" action="display.php">
+<form method="GET" action="">
 <button type="submit" id="search"  name="search">Search</button>
     <input id="uInput" type="search" name="uInput" placeholder="username">
 </form>
