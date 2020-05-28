@@ -40,9 +40,10 @@ SELECT * FROM users AS u
 JOIN goals AS g 
 ON u.id = g.user_id;
 
-SELECT * FROM users WHERE username='John' 
-JOIN goals
-ON users.id = goals.user_id;
+SELECT * FROM users AS u 
+JOIN goals AS g 
+ON u.id = g.user_id
+WHERE username='John';
 
 SELECT * FROM users;
 SELECT * FROM goals;
