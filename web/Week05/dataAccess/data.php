@@ -1,7 +1,9 @@
 <?php
     session_start();
-    
-    $_SESSION['username'] = $_GET['uInput'];
+    if (isset($_GET['uInput'])) {
+        
+        $_SESSION['username'] = $_GET['uInput'];
+    }
 ?>
 
 <!DOCTYPE html>
