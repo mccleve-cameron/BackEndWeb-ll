@@ -63,7 +63,7 @@
             <td>$date</td>
             <td>$goal</td>
             <td>$complete</td>
-        </tr>")
+        </tr>");
     }
     
 ?>
