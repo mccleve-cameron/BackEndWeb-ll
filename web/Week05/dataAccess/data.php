@@ -23,7 +23,7 @@
 
     session_start();
 
-    $stmt = $db->prepare("SELECT id, username FROM users WHERE username='John'");
+    $stmt = $db->prepare("SELECT id, username, password FROM users WHERE username='John'");
     $stmt->execute();
     $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -44,8 +44,9 @@
     foreach ($users as $user){
         $id = $user['id'];
         $username = $user['username'];
+        $password = $user['password'];
 
-        echo "<p>$id - $username</p>";
+        echo "<p>$id - $username - $password</p>";
     }
     ?>
 </body>
