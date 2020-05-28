@@ -40,13 +40,17 @@
     <h3>Search for a Username</h3>
     <input id="search" type="search" placeholder="username">
 <?php
-    var_dump($users);
+
+
     foreach ($users as $user){
+        $_SESSION['id'] = $user['id'];
         $id = $user['id'];
         $username = $user['username'];
 
         echo "<p>$id - $username</p>";
     }
+
+    echo $_SESSION['id'];
     ?>
 </body>
 </html>
