@@ -44,8 +44,6 @@
 
 $userArray[];
 
-for ()
-
     foreach ($users as $user){
         $userArray[] = $user;
 
