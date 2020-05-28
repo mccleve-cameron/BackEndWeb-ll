@@ -50,7 +50,7 @@ $userArray = array();
         echo "<p>-------</p>";
     }
 
-    echo $userArray[1];
+    echo $userArray;
     ?>
 </body>
 </html>
