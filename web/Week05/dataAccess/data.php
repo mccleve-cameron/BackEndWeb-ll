@@ -42,14 +42,17 @@
 
 <?php
 
-    foreach ($users as $user){
-        $data['id'][] = $user['id'];
-        $data['username'][] = $user['username'];
+$userArray[];
 
-        echo "<p>$id - $username</p>";
+for ()
+
+    foreach ($users as $user){
+        $userArray[] = $user;
+
+        echo "<p>-------</p>";
     }
 
-    echo $data[0];
+    echo $userArray[1]['id'];
     ?>
 </body>
 </html>
