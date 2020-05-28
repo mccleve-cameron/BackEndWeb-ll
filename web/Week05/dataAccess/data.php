@@ -38,7 +38,19 @@
 <button type="submit" id="search"  name="search">Search</button>
     <input id="uInput" type="search" name="uInput" placeholder="username">
 </form>
+<?php
+    foreach ($users as $user){
+        $id = $user['id'];
+        $username = $user['username'];
+        $password = $user['password'];
+        $goal = $user['goal_text'];
+        $complete = $user['is_complete'];
+        $date = $user['goal_date'];
 
+        echo "<p>$id - $username - $password - $goal - $complete - $date</p>";
+    }
+    
+?>
 <script>
     const username = document.querySelector("#search").addEventListener('click', display);
 
