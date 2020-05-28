@@ -1,9 +1,21 @@
 <?php
     session_start();
+    require "../../dbConnect.php";
+    $db = getDb();
+
     if (isset($_GET['uInput'])) {
         
         $_SESSION['username'] = $_GET['uInput'];
     }
+
+
+
+    $stmt = $db->prepare("SELECT * FROM users AS u 
+                    JOIN goals AS g 
+                    ON u.id = g.user_id
+                    WHERE username='John';");
+    $stmt->execute();
+    $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
