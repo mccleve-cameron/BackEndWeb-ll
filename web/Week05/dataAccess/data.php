@@ -34,6 +34,9 @@
     <input id="uInput" type="search" name="uInput" placeholder="username">
 </form>
 <?php
+    $username = $users[0]['username'];
+    echo $username;
+
     foreach ($users as $user){
         $id = $user['id'];
         $username = $user['username'];
@@ -48,7 +51,7 @@
         else {
             $complete = 'not done';
         }
-        echo "<p>$id - $username - $password - $goal - $complete - $date</p>";
+        echo "<p>$goal - $complete - $date</p>";
     }
     
 ?>
