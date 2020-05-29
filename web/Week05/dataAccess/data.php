@@ -85,7 +85,7 @@
  ?> 's Habits</h2>
     <table>
         <tr>
-            <th>Days per Week</th>
+            <th>Days</th>
             <th>Habit</th>
             <th>Status</th>
         </tr>
