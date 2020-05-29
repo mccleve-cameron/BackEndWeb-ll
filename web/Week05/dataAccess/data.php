@@ -75,10 +75,12 @@
     }
     
 ?>
+</table>
+
 <h2><?php     
     $username = $userGoals[0]['username'];
     echo $username;
- ?> 's Goals</h2>
+ ?> 's Habits</h2>
     <table>
         <tr>
             <th>Days per Week</th>
@@ -106,5 +108,6 @@
     }
     
 ?>
+</table>
 </body>
 </html>
