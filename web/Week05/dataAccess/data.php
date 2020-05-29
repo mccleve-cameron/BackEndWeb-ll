@@ -34,7 +34,9 @@
     <title>GoHabit</title>
     <link rel="stylesheet" href="data.css">
 </head>
-<header><h1>GoHabit</h1></header>
+<header>
+    <img src="logo.png" alt="">
+</header>
 <body>
 <h3>Search for a Username</h3>
 <form method="GET" action="data.php">
