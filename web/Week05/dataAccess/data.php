@@ -18,8 +18,8 @@
     $userGoals = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     $stmt2 = $db->prepare("SELECT * FROM users AS u 
-                    JOIN goals AS g 
-                    ON u.id = g.user_id
+                    JOIN habits AS h 
+                    ON u.id = h.user_id
                     WHERE username=:name");
     $stmt2->bindValue(':name', $name, PDO::PARAM_STR);
     $stmt2->execute();
