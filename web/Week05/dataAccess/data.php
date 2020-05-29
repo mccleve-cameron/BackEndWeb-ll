@@ -88,10 +88,10 @@
             <th>Status</th>
         </tr>
 <?php
-    foreach ($userHabits as $user){
-        $habit = $user['habit_text'];
-        $complete = $user['is_complete'];
-        $date = $user['habit_date'];
+    foreach ($userHabits as $userh){
+        $habit = $userh['habit_text'];
+        $complete = $userh['is_complete'];
+        $date = $userh['habit_date'];
 
         if ($complete) {
             $complete = 'completed';
