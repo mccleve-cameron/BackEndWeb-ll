@@ -14,9 +14,16 @@
                     ON u.id = g.user_id
                     WHERE username=:name");
     $stmt->bindValue(':name', $name, PDO::PARAM_STR);
-
     $stmt->execute();
-    $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $userGoals = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $stmt2 = $db->prepare("SELECT * FROM users AS u 
+                    JOIN goals AS g 
+                    ON u.id = g.user_id
+                    WHERE username=:name");
+    $stmt2->bindValue(':name', $name, PDO::PARAM_STR);
+    $stmt2->execute();
+    $userHabits = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +42,7 @@
     <button type="submit" id="search"  name="search">Search</button>
 </form>
 <h2><?php     
-    $username = $users[0]['username'];
+    $username = $userGoals[0]['username'];
     echo $username;
  ?> 's Goals</h2>
     <table>
@@ -45,7 +52,7 @@
             <th>Status</th>
         </tr>
 <?php
-    foreach ($users as $user){
+    foreach ($userGoals as $user){
         $id = $user['id'];
         $username = $user['username'];
         $password = $user['password'];
