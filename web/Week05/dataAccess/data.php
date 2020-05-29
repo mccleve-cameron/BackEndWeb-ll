@@ -75,5 +75,36 @@
     }
     
 ?>
+<h2><?php     
+    $username = $userGoals[0]['username'];
+    echo $username;
+ ?> 's Goals</h2>
+    <table>
+        <tr>
+            <th>Days per Week</th>
+            <th>Habit</th>
+            <th>Status</th>
+        </tr>
+<?php
+    foreach ($userHabits as $user){
+        $habit = $user['habit_text'];
+        $complete = $user['is_complete'];
+        $date = $user['habit_date'];
+
+        if ($complete) {
+            $complete = 'completed';
+        }
+        else {
+            $complete = 'not done';
+        }
+        echo( 
+        "<tr>
+            <td>$date</td>
+            <td>$habit</td>
+            <td>$complete</td>
+        </tr>");
+    }
+    
+?>
 </body>
 </html>
