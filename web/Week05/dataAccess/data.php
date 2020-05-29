@@ -46,7 +46,8 @@
 <h2><?php     
     $username = $userGoals[0]['username'];
     echo $username;
- ?> 's Goals</h2>
+ ?></h2>
+      <h3>Daily Goals</h3>
     <table>
         <tr>
             <th>Date</th>
@@ -78,11 +79,7 @@
     
 ?>
 </table>
-
-<h2><?php     
-    $username = $userGoals[0]['username'];
-    echo $username;
- ?> 's Habits</h2>
+    <h3>Weekly Habits</h3>
     <table>
         <tr>
             <th>Days</th>
