@@ -39,10 +39,10 @@
 </header>
 <body>
 <h3>Search for a Username</h3>
-<p>*possible usernames are: John, Bob, Sue, Joe</p>
 <form method="GET" action="data.php">
     <input id="uInput" type="search" name="uInput" placeholder="username">
     <button type="submit" id="search"  name="search">Search</button>
+    <p>*possible usernames are: John, Bob, Sue, Joe</p>
 </form>
 <h2><?php     
     $username = $userGoals[0]['username'];
