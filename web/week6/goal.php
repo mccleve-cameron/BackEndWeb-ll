@@ -26,6 +26,8 @@
     $userHabits = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 
     
+    $dateDisplay = date("l, M d");
+    $dateCompare = date("Y-m-d"); 
 ?>
 
 <!DOCTYPE html>
@@ -39,17 +41,13 @@
 </head>
 <header>
     <i id="leftArrow">&lt;</i>
-    <article id="date"></article>
+    <article><?php $dateDisplay ?></article>
     <i id="rightArrow">&gt;</i>
 </header>
 
 <body>
 <h2><?php     
 
-    echo date("l, M d");
-    echo "<br>";
-    echo date("Y-m-d");
-    echo "<br>";
 
     $username = $userGoals[0]['username'];
     echo $username;
@@ -77,12 +75,14 @@
             $complete = 'not done';
         }
 
-        echo( 
-        "<tr>
-            <td>$date</td>
-            <td>$goal</td>
-            <td>$complete</td>
-        </tr>");
+        if ($date == $dateCompare) {
+            echo( 
+                "<tr>
+                    <td>$date</td>
+                    <td>$goal</td>
+                    <td>$complete</td>
+                </tr>");
+        }
     }
     
 ?>
