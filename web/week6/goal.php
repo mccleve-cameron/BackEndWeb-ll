@@ -24,6 +24,8 @@
     $stmt2->bindValue(':name', $name, PDO::PARAM_STR);
     $stmt2->execute();
     $userHabits = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -44,16 +46,9 @@
 <body>
 <h2><?php     
 
-    echo date(DATE_RFC822);
-    echo "<script>
-    let date = getDay();
-    let month = getMonth();
-    let year = getYear();
-    console.log(date);
-    console.log(month);
-    console.log(year);
-    console.log('working');
-    </script>";
+    $day = "<script>getDay();</script>";
+    echo date($day);
+    
 
     $username = $userGoals[0]['username'];
     echo $username;
