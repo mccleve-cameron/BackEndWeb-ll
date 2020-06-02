@@ -18,12 +18,11 @@
 </header>
 
 <body>
-    <div class="input">
-    <input id="username" type="search" placeholder="username">
+    <form action="goal.php" method="get" class="input"> 
+    <input id="uInput" type="search" placeholder="username">
     <input id="password" type="text" placeholder="password">
-    <button id="login">Login</button>
-    </div>
-    </table>
+    <button id="login" type="submit">Login</button>
+</form>
 </body>
 
 </html>
