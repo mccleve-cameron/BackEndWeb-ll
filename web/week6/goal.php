@@ -57,7 +57,9 @@
             <i id="leftArrow" type="submit" name="left">&lt;</i>
         </button>
         <article><?php echo $dateDisplay; ?></article>
-        <span id="rightArrow" type="submit" name="righttBut" value="rightBut">&gt;</span>
+        <button type="submit" name="rightBut" value="rightBut"> 
+            <i id="rightArrow">&gt;</i>
+        </button>
     </header>
 </form>
 
