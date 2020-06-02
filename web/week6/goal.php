@@ -30,11 +30,11 @@
         $_SESSION['date']= date("l, M d");
     }
 
-
+    $currentDate = $_SESSION['date'];
     $dateCompare = date("Y-m-d"); 
 
     if (isset($_GET['leftBut'])) {
-        $_SESSION['date'] = date($_SESSION['date'], strtotime("-1 days"));
+        $_SESSION['date'] = date("l, M d", strtotime("$currentDate -1 day"));
     }
 
     $dateDisplay =  $_SESSION['date'];
