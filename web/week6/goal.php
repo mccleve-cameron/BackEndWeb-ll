@@ -107,5 +107,6 @@
     
 ?>
 </table>
+<script src="goal.js"></script>
 </body>
 </html>
