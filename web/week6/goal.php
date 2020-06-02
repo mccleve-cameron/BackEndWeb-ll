@@ -28,6 +28,10 @@
     
     $dateDisplay = date("l, M d");
     $dateCompare = date("Y-m-d"); 
+
+    if (isset($_GET['left'])) {
+        $dateDisplay = date("l, M d", strtotime("-1 days"));
+    }
 ?>
 
 <!DOCTYPE html>
@@ -40,9 +44,11 @@
     <link rel="stylesheet" href="goal.css">
 </head>
 <header>
-    <i id="leftArrow">&lt;</i>
+    <form action="goal.php" method="get">
+    <i id="leftArrow" type="submit" name="left">&lt;</i>
     <article><?php echo $dateDisplay; ?></article>
     <i id="rightArrow">&gt;</i>
+</form>
 </header>
 
 <body>
