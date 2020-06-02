@@ -1,4 +1,11 @@
 <?php
+    $dateDisplay = date("l, M d");
+    $dateCompare = date("Y-m-d"); 
+
+    if (isset($_GET['left'])) {
+        $dateDisplay = date("l, M d", strtotime("-1 days"));
+    }
+    
     session_start();
     require "../dbConnect.php";
     $db = getDb();
@@ -26,12 +33,7 @@
     $userHabits = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 
     
-    $dateDisplay = date("l, M d");
-    $dateCompare = date("Y-m-d"); 
 
-    if (isset($_GET['left'])) {
-        $dateDisplay = date("l, M d", strtotime("-1 days"));
-    }
 ?>
 
 <!DOCTYPE html>
