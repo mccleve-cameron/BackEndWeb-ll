@@ -33,7 +33,7 @@
         $dateDisplay = "changed";
     }
     else {
-        $dateDisplay = "date";
+        $dateDisplay = date("l, M d");
     }
 ?>
 
