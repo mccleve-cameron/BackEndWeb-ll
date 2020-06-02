@@ -60,7 +60,6 @@
             <i id="leftArrow" type="submit" name="left">&lt;</i>
         </button>
         <article><?php echo $currentDate; ?></article>
-        <article><?php echo $currentDate; ?></article>
         <button type="submit" name="rightBut" value="rightBut"> 
             <i id="rightArrow">&gt;</i>
         </button>
@@ -97,7 +96,7 @@
             $complete = 'not done';
         }
 
-        if ($date == $dateCompare) {
+        if ($date == $currentDate) {
             echo( 
                 "<tr>
                     <td>$date</td>
