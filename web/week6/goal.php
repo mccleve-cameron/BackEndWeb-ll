@@ -30,7 +30,7 @@
     $dateCompare = date("Y-m-d"); 
 
     if (isset($_GET['leftBut'])) {
-        $dateDisplay = "changed";
+        $dateDisplay = date("l, M d", strtotime("-1 days"));
     }
     else {
         $dateDisplay = date("l, M d");
