@@ -27,6 +27,7 @@
 
     $_SESSION['date'] = date("l, M d");
 
+    $dateDisplay =  $_SESSION['date'];
     $dateCompare = date("Y-m-d"); 
 
     if (isset($_GET['leftBut'])) {
