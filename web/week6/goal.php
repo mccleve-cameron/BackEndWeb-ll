@@ -36,7 +36,9 @@
     if (isset($_GET['leftBut'])) {
         $_SESSION['date'] = date("l, M d", strtotime("$currentDate -1 day"));
     }
-
+    if (isset($_GET['rightBut'])) {
+        $_SESSION['date'] = date("l, M d", strtotime("$currentDate +1 day"));
+    }
     $dateDisplay =  $_SESSION['date'];
 ?>
 
@@ -55,7 +57,7 @@
             <i id="leftArrow" type="submit" name="left">&lt;</i>
         </button>
         <article><?php echo $dateDisplay; ?></article>
-        <i id="rightArrow">&gt;</i>
+        <span id="rightArrow" type="submit" name="righttBut" value="rightBut">&gt;</span>
     </header>
 </form>
 
