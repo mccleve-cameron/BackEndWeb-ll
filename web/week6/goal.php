@@ -47,7 +47,7 @@
 <h2><?php     
 
     $day = "<script>getDay();</script>";
-    echo date($day);
+    echo $day;
     
 
     $username = $userGoals[0]['username'];
