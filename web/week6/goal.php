@@ -44,7 +44,7 @@
 <body>
 <h2><?php     
 
-echo date("1");
+echo date();
 
     $username = $userGoals[0]['username'];
     echo $username;
