@@ -41,7 +41,7 @@
 </head>
 <header>
     <i id="leftArrow">&lt;</i>
-    <article><?php $dateDisplay ?></article>
+    <article><?php echo $dateDisplay; ?></article>
     <i id="rightArrow">&gt;</i>
 </header>
 
