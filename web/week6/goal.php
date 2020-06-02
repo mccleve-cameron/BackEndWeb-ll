@@ -28,19 +28,19 @@
     if (!isset($_SESSION['date'])) {
 
         $_SESSION['date']= date("l, M d");
-        $_SESSION['dateCompare'] = date("Y-m-d");
+        //$_SESSION['dateCompare'] = date("Y-m-d");
     }
 
     $currentDate = $_SESSION['date'];
-    $dateCompare = $_SESSION['dateCompare']; 
+    //$dateCompare = $_SESSION['dateCompare']; 
 
     if (isset($_GET['leftBut'])) {
         $_SESSION['date'] = date("l, M d", strtotime("$currentDate -1 day"));
-        $_SESSION['dateCompare'] = date("Y-m-d", strtotime("$currentDate -1 day"));
+        //$_SESSION['dateCompare'] = date("Y-m-d", strtotime("$currentDate -1 day"));
     }
     if (isset($_GET['rightBut'])) {
         $_SESSION['date'] = date("l, M d", strtotime("$currentDate +1 day"));
-        $_SESSION['dateCompare'] = date("Y-m-d", strtotime("$currentDate +1 day"));
+        //$_SESSION['dateCompare'] = date("Y-m-d", strtotime("$currentDate +1 day"));
     }
     $dateDisplay =  $_SESSION['date'];
 ?>
@@ -60,7 +60,9 @@
             <i id="leftArrow" type="submit" name="left">&lt;</i>
         </button>
         <article><?php echo $dateDisplay; ?></article>
-        <article><?php echo $dateCompare; ?></article>
+        <article><?php 
+        $dateCompare = date("Y-m-d", strtotime("$currentDate"))
+        echo $dateCompare; ?></article>
         <button type="submit" name="rightBut" value="rightBut"> 
             <i id="rightArrow">&gt;</i>
         </button>
