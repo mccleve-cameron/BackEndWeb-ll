@@ -33,7 +33,7 @@
         $dateDisplay = "changed";
     }
     else {
-        $dateDisplay = "test";
+        $dateDisplay = "date";
     }
 ?>
 
