@@ -1,11 +1,6 @@
 header {
     text-align: center;
     padding: 10px;
-    background-color: teal;
-    font-size: 25pt;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
 }
 
 img {
@@ -16,7 +11,6 @@ img {
 body {
     text-align: center;
     background-color: whitesmoke;
-
 }
 
 table, th, tr, td {

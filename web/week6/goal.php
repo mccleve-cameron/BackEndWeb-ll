@@ -1,3 +1,31 @@
+<?php
+    session_start();
+    require "../../dbConnect.php";
+    $db = getDb();
+
+    $name = 'John';
+    if (isset($_GET['uInput'])) { 
+        $_SESSION['username'] = $_GET['uInput'];
+        $name = $_SESSION['username'];
+    }
+
+    $stmt = $db->prepare("SELECT * FROM users AS u 
+                    JOIN goals AS g 
+                    ON u.id = g.user_id
+                    WHERE username=:name");
+    $stmt->bindValue(':name', $name, PDO::PARAM_STR);
+    $stmt->execute();
+    $userGoals = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $stmt2 = $db->prepare("SELECT * FROM users AS u 
+                    JOIN habits AS h 
+                    ON u.id = h.user_id
+                    WHERE username=:name");
+    $stmt2->bindValue(':name', $name, PDO::PARAM_STR);
+    $stmt2->execute();
+    $userHabits = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +33,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoHabitTest</title>
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="goal.css">
 </head>
 <header>
     <i id="leftArrow">&lt;</i>
