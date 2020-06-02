@@ -43,8 +43,8 @@
 
 <body>
 <h2><?php     
-$date = date();
-echo $date;
+
+echo date("1");
 
     $username = $userGoals[0]['username'];
     echo $username;
