@@ -44,7 +44,16 @@
 <body>
 <h2><?php     
 
-echo date(DATE_RFC822);
+    echo date(DATE_RFC822);
+    echo "<script>
+    let date = getDay();
+    let month = getMonth();
+    let year = getYear();
+    console.log(date);
+    console.log(month);
+    console.log(year);
+    console.log('working');
+    </script>";
 
     $username = $userGoals[0]['username'];
     echo $username;
