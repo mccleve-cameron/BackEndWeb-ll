@@ -43,13 +43,13 @@
     <title>GoHabit</title>
     <link rel="stylesheet" href="goal.css">
 </head>
-<header>
-    <form action="goal.php" method="get">
-    <i id="leftArrow" type="submit" name="left">&lt;</i>
-    <article><?php echo $dateDisplay; ?></article>
-    <i id="rightArrow">&gt;</i>
+<form action="goal.php" method="get">
+    <header>
+        <i id="leftArrow" type="submit" name="left">&lt;</i>
+        <article><?php echo $dateDisplay; ?></article>
+        <i id="rightArrow">&gt;</i>
+    </header>
 </form>
-</header>
 
 <body>
 <h2><?php     
