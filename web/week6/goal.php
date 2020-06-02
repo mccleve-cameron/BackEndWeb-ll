@@ -61,7 +61,7 @@
         </button>
         <article><?php echo $dateDisplay; ?></article>
         <article><?php 
-        $dateCompare = date("Y-m-d", strtotime("$currentDate"))
+        $dateCompare = date("Y-m-d", strtotime("$currentDate +0 day"));
         echo $dateCompare; ?></article>
         <button type="submit" name="rightBut" value="rightBut"> 
             <i id="rightArrow">&gt;</i>
