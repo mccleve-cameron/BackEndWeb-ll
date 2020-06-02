@@ -25,17 +25,18 @@
     $stmt2->execute();
     $userHabits = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 
-    $_SESSION['date'] = date("l, M d");
+    if (!isset($_SESSION['date'])) {
+
+        $_SESSION['date']= date("l, M d");
+    }
 
 
     $dateCompare = date("Y-m-d"); 
 
     if (isset($_GET['leftBut'])) {
-        $_SESSION['date'] = date("l, M d", strtotime("-1 days"));
+        $_SESSION['date'] = date($_SESSION['date'], strtotime("-1 days"));
     }
-    else {
-        $_SESSION['date'] = date("l, M d");
-    }
+
     $dateDisplay =  $_SESSION['date'];
 ?>
 
