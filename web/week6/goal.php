@@ -45,7 +45,9 @@
 </head>
 <form action="goal.php" method="get">
     <header>
-        <i id="leftArrow" type="submit" name="left">&lt;</i>
+        <button type="submit">    
+            <i id="leftArrow" type="submit" name="left">&lt;</i>
+        </button>
         <article><?php echo $dateDisplay; ?></article>
         <i id="rightArrow">&gt;</i>
     </header>
