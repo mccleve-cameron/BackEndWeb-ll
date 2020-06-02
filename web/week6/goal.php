@@ -44,7 +44,7 @@
 <body>
 <h2><?php     
 
-echo date();
+echo date(DATE_RFC822);
 
     $username = $userGoals[0]['username'];
     echo $username;
