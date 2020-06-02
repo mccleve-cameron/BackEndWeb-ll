@@ -29,7 +29,7 @@
 
     $dateCompare = date("Y-m-d"); 
 
-    if (isset($_GET['left'])) {
+    if (isset($_GET['leftBut'])) {
         $dateDisplay = "changed";
     }
     else {
@@ -48,7 +48,7 @@
 </head>
 <form action="goal.php" method="get">
     <header>
-        <button type="submit">    
+        <button type="submit" name="leftBut" value="leftBut">    
             <i id="leftArrow" type="submit" name="left">&lt;</i>
         </button>
         <article><?php echo $dateDisplay; ?></article>
