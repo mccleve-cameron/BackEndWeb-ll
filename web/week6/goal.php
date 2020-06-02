@@ -37,10 +37,12 @@
     if (isset($_GET['leftBut'])) {
         $_SESSION['date'] = date("Y-m-d", strtotime("$currentDate -1 day"));
         //$_SESSION['dateCompare'] = date("Y-m-d", strtotime("$currentDate -1 day"));
+        echo ("left called");
     }
     if (isset($_GET['rightBut'])) {
         $_SESSION['date'] = date("Y-m-d", strtotime("$currentDate +1 day"));
         //$_SESSION['dateCompare'] = date("Y-m-d", strtotime("$currentDate +1 day"));
+        echo ("right called");
     }
     //$dateDisplay =  $_SESSION['date'];
 ?>
