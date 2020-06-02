@@ -32,6 +32,7 @@
     }
 
     $currentDate = $_SESSION['date'];
+    $dateCompare = date("Y-m-d", strtotime($currentDate));
     //$dateCompare = $_SESSION['dateCompare']; 
 
     if (isset($_GET['leftBut'])) {
@@ -60,9 +61,7 @@
             <i id="leftArrow" type="submit" name="left">&lt;</i>
         </button>
         <article><?php echo $dateDisplay; ?></article>
-        <article><?php 
-        $dateCompare = date("Y-m-d", strtotime("$currentDate +0 day"));
-        echo $dateCompare; ?></article>
+        <article><?php echo $dateCompare; ?></article>
         <button type="submit" name="rightBut" value="rightBut"> 
             <i id="rightArrow">&gt;</i>
         </button>
