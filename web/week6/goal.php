@@ -26,11 +26,14 @@
     $userHabits = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 
     
-    $dateDisplay = date("l, M d");
+
     $dateCompare = date("Y-m-d"); 
 
     if (isset($_GET['left'])) {
         $dateDisplay = "changed";
+    }
+    else {
+        $dateDisplay = date("l, M d");
     }
 ?>
 
