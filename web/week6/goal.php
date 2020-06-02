@@ -3,9 +3,9 @@
     require "../dbConnect.php";
     $db = getDb();
 
-    $name = 'John';
-    if (isset($_GET['uInput'])) { 
-        $_SESSION['username'] = $_GET['uInput'];
+    $name = '';
+    if (isset($_GET['username'])) { 
+        $_SESSION['username'] = $_GET['username'];
         $name = $_SESSION['username'];
     }
 
