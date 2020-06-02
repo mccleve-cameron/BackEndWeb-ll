@@ -42,31 +42,42 @@
 </header>
 
 <body>
-
-    <h2>Bob</h2>
-    <h3>Daily Goals</h3>
+<h2><?php     
+    $username = $userGoals[0]['username'];
+    echo $username;
+ ?></h2>
+      <h3>Daily Goals</h3>
     <table>
         <tr>
             <th>Date</th>
             <th>Goal</th>
             <th>Status</th>
         </tr>
-        <tr>
-            <td>2020-05-12</td>
-            <td>take out trash knolnk popop npo</td>
-            <td>done</td>
-        </tr>
-        <tr>
-            <td>2020-05-12</td>
-            <td>take out trash knolnk popop npo</td>
-            <td>done</td>
-        </tr>
-        <tr>
-            <td>2020-05-12</td>
-            <td>take out trash knolnk popop npo</td>
-            <td>done</td>
-        </tr>
-    </table>
+<?php
+    foreach ($userGoals as $user){
+        $id = $user['id'];
+        $username = $user['username'];
+        $password = $user['password'];
+        $goal = $user['goal_text'];
+        $complete = $user['is_complete'];
+        $date = $user['goal_date'];
+
+        if ($complete) {
+            $complete = 'completed';
+        }
+        else {
+            $complete = 'not done';
+        }
+        echo( 
+        "<tr>
+            <td>$date</td>
+            <td>$goal</td>
+            <td>$complete</td>
+        </tr>");
+    }
+    
+?>
+</table>
     <h3>Weekly Habits</h3>
     <table>
         <tr>
@@ -74,13 +85,27 @@
             <th>Habit</th>
             <th>Status</th>
         </tr>
-        <tr>
-            <td>7</td>
-            <td>non oioieopiwe</td>
-            <td>done</td>
-        </tr>
-    </table>
-    <script src="goal.js"></script>
-</body>
+<?php
+    foreach ($userHabits as $userh){
+        $habit = $userh['habit_text'];
+        $complete = $userh['is_complete'];
+        $date = $userh['habit_date'];
 
+        if ($complete) {
+            $complete = 'completed';
+        }
+        else {
+            $complete = 'not done';
+        }
+        echo( 
+        "<tr>
+            <td>$date</td>
+            <td>$habit</td>
+            <td>$complete</td>
+        </tr>");
+    }
+    
+?>
+</table>
+</body>
 </html>
