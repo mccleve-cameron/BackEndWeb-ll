@@ -43,6 +43,9 @@
 
 <body>
 <h2><?php     
+$date = date();
+echo $date;
+
     $username = $userGoals[0]['username'];
     echo $username;
  ?></h2>
@@ -68,6 +71,7 @@
         else {
             $complete = 'not done';
         }
+
         echo( 
         "<tr>
             <td>$date</td>

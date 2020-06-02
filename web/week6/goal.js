@@ -28,3 +28,17 @@ function getFutureDay() {
 
     displayDate();
 }
+
+function getDay() {
+    let day = currentDate.getDate();
+    console.log(currentDate);
+    return day;
+}
+function getMonth() {
+    let month = currentDate.getMonth();
+    return month + 1;
+}
+function getYear() {
+    let year = currentDate.getFullYear();
+    return year;
+}

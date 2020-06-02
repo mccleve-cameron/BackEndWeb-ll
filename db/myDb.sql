@@ -33,12 +33,12 @@ INSERT INTO users VALUES (DEFAULT,'Joe', 'joe1');
 --inserts using todays date
 INSERT INTO goals VALUES (DEFAULT, 'take out trash', FALSE, CURRENT_DATE, 1);
 --inserts using manual date
-INSERT INTO goals VALUES (DEFAULT, 'wash dishes', FALSE, '2020-05-23', 1);
-INSERT INTO goals VALUES (DEFAULT, 'clean room', FALSE, '2020-05-24', 2);
-INSERT INTO goals VALUES (DEFAULT, 'clean room', FALSE, '2020-05-20', 3);
-INSERT INTO goals VALUES (DEFAULT, 'apply for internship', TRUE, '2020-05-20', 4);
-INSERT INTO goals VALUES (DEFAULT, 'sweep floor', FALSE, '2020-05-20', 4);
-INSERT INTO goals VALUES (DEFAULT, 'finish HW', FALSE, '2020-05-20', 4);
+INSERT INTO goals VALUES (DEFAULT, 'wash dishes', FALSE, '2020-06-01', 1);
+INSERT INTO goals VALUES (DEFAULT, 'clean room', FALSE, '2020-06-01', 1);
+INSERT INTO goals VALUES (DEFAULT, 'clean room', FALSE, '2020-06-02', 1);
+INSERT INTO goals VALUES (DEFAULT, 'apply for internship', TRUE, '2020-06-02', 1);
+INSERT INTO goals VALUES (DEFAULT, 'sweep floor', FALSE, '2020-06-03', 1);
+INSERT INTO goals VALUES (DEFAULT, 'finish HW', FALSE, '2020-06-03', 1);
 ---User 1 habits
 INSERT INTO habits VALUES (DEFAULT, 'work-out', FALSE, 6, 1);
 INSERT INTO habits VALUES (DEFAULT, 'run', FALSE, 3, 1);
