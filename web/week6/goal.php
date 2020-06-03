@@ -97,6 +97,13 @@
         else {
             $complete = 'not done';
         }
+        echo( 
+            "<tr>
+            <td>$userId</>
+                <td>$date</td>
+                <td><input type='checkbox'>$goal</td>
+                <td>$complete</td>
+            </tr>");
 
         if ($date == $_SESSION['date']) {
             echo( 
