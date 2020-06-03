@@ -3,17 +3,19 @@
     require "../dbConnect.php";
     $db = getDb();
 
-    $name = 'Bob';
-    if (isset($_GET['username'])) { 
-        $_SESSION['username'] = $_GET['username'];
-        $name = $_SESSION['username'];
+    if (!isset($_GET['username'])) { 
+        die("Error, username not specified...");
     }
+
+    //$_SESSION['username'] = $_GET['username'];
+    $username = htmlspecialchars($_GET['username']);
+    
 
     $stmt = $db->prepare("SELECT * FROM users AS u 
                     JOIN goals AS g 
                     ON u.id = g.user_id
                     WHERE username=:name");
-    $stmt->bindValue(':name', $name, PDO::PARAM_STR);
+    $stmt->bindValue(':name', $username, PDO::PARAM_STR);
     $stmt->execute();
     $userGoals = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -21,7 +23,7 @@
                     JOIN habits AS h 
                     ON u.id = h.user_id
                     WHERE username=:name");
-    $stmt2->bindValue(':name', $name, PDO::PARAM_STR);
+    $stmt2->bindValue(':name', $username, PDO::PARAM_STR);
     $stmt2->execute();
     $userHabits = $stmt2->fetchAll(PDO::FETCH_ASSOC);
     
