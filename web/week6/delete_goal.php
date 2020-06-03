@@ -6,20 +6,20 @@ $taskId = htmlspecialchars($_GET['taskId']);
 echo $taskId;
 echo $username;
 
-// require "../dbConnect.php";
-// $db = getDb();
+require "../dbConnect.php";
+$db = getDb();
 
 
 
-// $stmt = $db->prepare("INSERT INTO goals VALUES (DEFAULT, :newTask, FALSE, :addDate, :userId);");
-// $stmt->bindValue(':newTask', $newTask, PDO::PARAM_STR);
+$stmt = $db->prepare("DELETE FROM goals WHERE id = :taskId;");
+$stmt->bindValue(':taskId', $taskId, PDO::PARAM_INT);
 // $stmt->bindValue(':addDate', $addDate, PDO::PARAM_STR);
 // $stmt->bindValue(':userId', $userId, PDO::PARAM_INT);
-// $stmt->execute();
+$stmt->execute();
 
-// $new_page = "goal.php?username=$username";
+$new_page = "goal.php?username=$username";
 
-// header("Location: $new_page");
-// die();
+header("Location: $new_page");
+die();
 
 ?>
