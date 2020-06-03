@@ -1,9 +1,10 @@
 <?php
 session_start();
 
-$userId = htmlspecialchars($_POST['userId']);
-$newTask = htmlspecialchars($_POST['goalContent']);
-$addDate = $_POST['date'];
+$username = htmlspecialchars($_GET['username']);
+$userId = htmlspecialchars($_GET['userId']);
+$newTask = htmlspecialchars($_GET['goalContent']);
+$addDate = $_GET['date'];
 
 $_SESSION['currentId'] = $userId;
 
@@ -18,7 +19,7 @@ $stmt->bindValue(':addDate', $addDate, PDO::PARAM_STR);
 $stmt->bindValue(':userId', $userId, PDO::PARAM_INT);
 $stmt->execute();
 
-$new_page = "goal.php?id=$userId";
+$new_page = "goal.php?username=$username";
 
 header("Location: $new_page");
 die();
