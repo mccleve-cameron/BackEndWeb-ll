@@ -29,17 +29,18 @@
 
         $_SESSION['date']= date("Y-m-d");
         //$_SESSION['dateCompare'] = date("Y-m-d");
+        echo ("left called");
     }
 
     $currentDate = $_SESSION['date'];
         //$dateCompare = $_SESSION['dateCompare']; 
 
-    if (isset($_GET['leftBut'])) {
+    else if (isset($_GET['leftBut'])) {
         $_SESSION['date'] = date("Y-m-d", strtotime("$currentDate -1 day"));
         //$_SESSION['dateCompare'] = date("Y-m-d", strtotime("$currentDate -1 day"));
         echo ("left called");
     }
-    if (isset($_GET['rightBut'])) {
+    else if (isset($_GET['rightBut'])) {
         $_SESSION['date'] = date("Y-m-d", strtotime("$currentDate +1 day"));
         //$_SESSION['dateCompare'] = date("Y-m-d", strtotime("$currentDate +1 day"));
         echo ("right called");
