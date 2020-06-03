@@ -40,7 +40,7 @@
         //$_SESSION['dateCompare'] = date("Y-m-d", strtotime("$currentDate -1 day"));
         echo ("left called");
     }
-    else if isset(($_GET['rightBut'])) {
+    else if (isset($_GET['rightBut'])) {
         $tmp2 =$_SESSION['date'];
         $_SESSION['date'] = date("Y-m-d", strtotime("$tmp2 +1 day"));
         //$_SESSION['dateCompare'] = date("Y-m-d", strtotime("$currentDate +1 day"));
