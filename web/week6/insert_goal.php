@@ -1,7 +1,7 @@
 <?php
 
-$userId = $_POST['userId'];
-$newTask = $_POST['goalContent'];
+$userId = htmlspecialchars($_POST['userId']);
+$newTask = htmlspecialchars($_POST['goalContent']);
 $addDate = $_POST['date'];
 
 echo $userId;
