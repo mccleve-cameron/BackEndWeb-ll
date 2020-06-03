@@ -148,4 +148,8 @@
 </table>
 
 </body>
+<footer>
+    <span><button><a href="login.php">Logout</a></button></span>
+    <span><button>Add</button></span>
+</footer>
 </html>
