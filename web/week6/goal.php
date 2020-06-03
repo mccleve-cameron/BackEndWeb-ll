@@ -119,6 +119,7 @@
 
 </table>
     <form action="insert_goal.php" method="post">
+        <input type="hidden" name="date" value="<?php echo $_SESSION['date']; ?>">
         <input type="hidden" name="userId" value="<?php echo $userId; ?>">
         <input type="text" name="goalContent" id="goalContent">
         <input type="submit" value="Add Goal">
