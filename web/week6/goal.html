@@ -18,14 +18,18 @@
     <h3>Daily Goals</h3>
     <table>
         <tr>
-            <th>Date</th>
             <th>Goal</th>
             <th>Status</th>
+            <th>Edit</th>
+            <th>Detete</th>
         </tr>
         <tr>
-            <td>2020-05-12</td>
             <td><input type="checkbox"> out trash knolnk</td>
-            <td>               
+            <td>done</td>
+            <td>
+                <input type='submit' value='Edit'>
+            </td>
+            <td>
                 <form action='delete_goal.php' method='get'>
                     <input type='hidden' name='username' value=''>
                     <input type='hidden' name='taskId' value=''>
@@ -34,14 +38,32 @@
             </td>
         </tr>
         <tr>
-            <td>2020-05-12</td>
-            <td><input type="checkbox"> take out trash knolnk</td>
+            <td><input type="checkbox" type="submit"> take out trash knolnk</td>
             <td>done</td>
+            <td>
+                <input type='submit' value='Edit'>
+            </td>
+            <td>
+                <form action='delete_goal.php' method='get'>
+                    <input type='hidden' name='username' value=''>
+                    <input type='hidden' name='taskId' value=''>
+                    <input type='submit' value='Delete'>
+                </form>
+            </td>
         </tr>
         <tr>
-            <td>2020-05-12</td>
             <td><input type="checkbox"> take out trash knolnk popop</td>
             <td>done</td>
+            <td>
+                <input type='submit' value='Edit'>
+            </td>
+            <td>
+                <form action='delete_goal.php' method='get'>
+                    <input type='hidden' name='username' value=''>
+                    <input type='hidden' name='taskId' value=''>
+                    <input type='submit' value='Delete'>
+                </form>
+            </td>
         </tr>
     </table>
     <form action="insert_goal.php" method="post">
@@ -64,15 +86,15 @@
     </table>
     <script src="goal.js">
     </script>
-    
+
     <script>
-    let date = getDay();
-    let month = getMonth();
-    let year = getYear();
-    console.log(date);
-    console.log(month);
-    console.log(year);
-    console.log("working");
+        let date = getDay();
+        let month = getMonth();
+        let year = getYear();
+        console.log(date);
+        console.log(month);
+        console.log(year);
+        console.log("working");
     </script>
 </body>
 <footer>

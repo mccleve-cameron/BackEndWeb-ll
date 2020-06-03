@@ -13,8 +13,7 @@ $db = getDb();
 
 $stmt = $db->prepare("DELETE FROM goals WHERE id = :taskId;");
 $stmt->bindValue(':taskId', $taskId, PDO::PARAM_INT);
-// $stmt->bindValue(':addDate', $addDate, PDO::PARAM_STR);
-// $stmt->bindValue(':userId', $userId, PDO::PARAM_INT);
+
 $stmt->execute();
 
 $new_page = "goal.php?username=$username";
