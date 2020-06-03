@@ -31,25 +31,18 @@
     if (!isset($_SESSION['date'])) {
 
         $_SESSION['date']= date("Y-m-d");
-        //$_SESSION['dateCompare'] = date("Y-m-d");
-        echo ("start called");
     }
     if (isset($_GET['leftBut'])) {
         $tmp1 = $_SESSION['date'];
         $_SESSION['date'] = date("Y-m-d", strtotime("$tmp1 -1 day"));
-        //$_SESSION['dateCompare'] = date("Y-m-d", strtotime("$currentDate -1 day"));
-        echo ("left called");
     }
     if (isset($_GET['rightBut'])) {
         $tmp2 =$_SESSION['date'];
         $_SESSION['date'] = date("Y-m-d", strtotime("$tmp2 +1 day"));
-        //$_SESSION['dateCompare'] = date("Y-m-d", strtotime("$currentDate +1 day"));
-        echo ("right called");
     }
     
     $currentDate = $_SESSION['date'];
-        //$dateCompare = $_SESSION['dateCompare']; 
-    //$dateDisplay =  $_SESSION['date'];
+    $userId = "";
 ?>
 
 <!DOCTYPE html>
@@ -91,7 +84,7 @@
         </tr>
 <?php
     foreach ($userGoals as $user){
-        $id = $user['id'];
+        $userId = $user['id'];
         $username = $user['username'];
         $password = $user['password'];
         $goal = $user['goal_text'];
@@ -116,6 +109,11 @@
     }
     
 ?>
+    <form action="insert_goal.php" method="post">
+        <input type="hidden" name="userId" value="<?php echo $userId; ?>">
+        <input type="text" name="goalContent" id="goalContent">
+        <input type="submit" value="Add Goal">
+    </form>
 </table>
     <h3>Weekly Habits</h3>
     <table>
