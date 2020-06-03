@@ -14,7 +14,7 @@ $stmt->bindValue(':newTask', $newTask, PDO::PARAM_STR);
 $stmt->bindValue(':userId', $userId, PDO::PARAM_INT);
 $stmt->execute();
 
-$new_page = "goal.php?id=$userId";
+$new_page = "goal.php";
 
 header("Location: $new_page");
 die();
