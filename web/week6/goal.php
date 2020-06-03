@@ -85,6 +85,7 @@
 <?php
     foreach ($userGoals as $user){
         $userId = $user['user_id'];
+        $taskId = $user['id'];
         $username = $user['username'];
         $password = $user['password'];
         $goal = $user['goal_text'];
@@ -103,7 +104,7 @@
                 "<tr>
                     <td>$date</td>
                     <td><input type='checkbox'>$goal</td>
-                    <td>$complete</td>
+                    <td>$taskId</td>
                 </tr>");
         }
     }

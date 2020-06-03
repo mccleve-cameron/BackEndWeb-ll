@@ -56,6 +56,8 @@ INSERT INTO habits VALUES (DEFAULT, 'make my bed', FALSE, 7, 4);
 INSERT INTO habits VALUES (DEFAULT, 'exercise 1hr', FALSE, 6, 4);
 INSERT INTO habits VALUES (DEFAULT, 'read scriptures', FALSE, 7, 4);
 
+DELETE FROM goals WHERE id = 35;
+
 SELECT * FROM users AS u 
 JOIN goals AS g 
 ON u.id = g.user_id;
