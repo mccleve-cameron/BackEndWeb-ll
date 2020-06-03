@@ -24,8 +24,11 @@
     $stmt2->bindValue(':name', $name, PDO::PARAM_STR);
     $stmt2->execute();
     $userHabits = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-
-    if (!isset($_SESSION['date'])) {
+    
+    if (isset($_SESSION['date'])) {
+        echo ("already set");
+    }
+    else if (!isset($_SESSION['date'])) {
 
         $_SESSION['date']= date("Y-m-d");
         //$_SESSION['dateCompare'] = date("Y-m-d");
