@@ -42,7 +42,7 @@
     }
     
     $currentDate = $_SESSION['date'];
-    $userId = "";
+    $userId = 0;
 ?>
 
 <!DOCTYPE html>
