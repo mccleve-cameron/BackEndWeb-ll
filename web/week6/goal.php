@@ -35,12 +35,12 @@
         echo ("start called");
     }
     else if ($_GET['leftBut']) {
-        $_SESSION['date'] = date("Y-m-d", strtotime("$currentDate -1 day"));
+        $_SESSION['date'] = date("Y-m-d", strtotime("$_SESSION['date'] -1 day"));
         //$_SESSION['dateCompare'] = date("Y-m-d", strtotime("$currentDate -1 day"));
         echo ("left called");
     }
     else if ($_GET['rightBut']) {
-        $_SESSION['date'] = date("Y-m-d", strtotime("$currentDate +1 day"));
+        $_SESSION['date'] = date("Y-m-d", strtotime("$_SESSION['date'] +1 day"));
         //$_SESSION['dateCompare'] = date("Y-m-d", strtotime("$currentDate +1 day"));
         echo ("right called");
     }
@@ -64,7 +64,7 @@
         <button type="submit" name="leftBut" value="leftBut">    
             <i id="leftArrow" type="submit" name="left">&lt;</i>
         </button>
-        <article><?php echo $currentDate; ?></article>
+        <article><?php echo $_SESSION['date']; ?></article>
         <button type="submit" name="rightBut" value="rightBut"> 
             <i id="rightArrow">&gt;</i>
         </button>
@@ -101,7 +101,7 @@
             $complete = 'not done';
         }
 
-        if ($date == $currentDate) {
+        if ($date == $_SESSION['date']) {
             echo( 
                 "<tr>
                     <td>$date</td>
