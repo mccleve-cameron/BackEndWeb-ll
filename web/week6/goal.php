@@ -66,7 +66,9 @@
         <button type="submit" name="leftBut" value="leftBut">    
             <i id="leftArrow" type="submit" name="left">&lt;</i>
         </button>
-        <article><?php echo $_SESSION['date']; ?></article>
+        <article><?php 
+        $tmp3 = $_SESSION['date'];
+        echo date("Y-m-d", strtotime("$tmp3 -1 day")); ?></article>
         <button type="submit" name="rightBut" value="rightBut"> 
             <i id="rightArrow">&gt;</i>
         </button>
