@@ -55,7 +55,8 @@
 </head>
 <form action="goal.php" method="get">
     <header>
-        <button type="submit" name="leftBut" value="leftBut">    
+        <button type="submit" name="leftBut" value="leftBut">
+            <input type="hidden" name="username" value="<?php echo $username; ?>">  
             <i id="leftArrow" type="submit" name="left">&lt;</i>
         </button>
         <article><?php 
