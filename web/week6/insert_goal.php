@@ -15,7 +15,7 @@ $stmt->execute();
 
 $new_page = "goal.php?id=$userId";
 
-header("Location: $newTask");
+header("Location: $new_page");
 die();
 
 ?>
