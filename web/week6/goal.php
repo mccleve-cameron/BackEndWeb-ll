@@ -84,7 +84,7 @@
         </tr>
 <?php
     foreach ($userGoals as $user){
-        $userId = $user['id'];
+        $userId = $user['user_id'];
         $username = $user['username'];
         $password = $user['password'];
         $goal = $user['goal_text'];
