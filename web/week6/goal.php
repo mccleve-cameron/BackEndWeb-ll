@@ -68,7 +68,7 @@
         </button>
         <article><?php 
         $tmp3 = $_SESSION['date'];
-        echo date("Y-m-d", strtotime("$tmp3 -1 day")); ?></article>
+        echo date("Y-m-d", strtotime($tmp3)); ?></article>
         <button type="submit" name="rightBut" value="rightBut"> 
             <i id="rightArrow">&gt;</i>
         </button>
