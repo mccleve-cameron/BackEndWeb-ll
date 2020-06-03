@@ -7,8 +7,8 @@
         die("Error, username not specified...");
     }
 
-    //$_SESSION['username'] = $_GET['username'];
-    $username = htmlspecialchars($_GET['username']);
+    $_SESSION['username'] = $_GET['username'];
+    $username = $_SESSION['username'];
     
 
     $stmt = $db->prepare("SELECT * FROM users AS u 
