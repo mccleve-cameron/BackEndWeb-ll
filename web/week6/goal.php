@@ -35,12 +35,14 @@
         echo ("start called");
     }
     else if ($_GET['leftBut']) {
-        $_SESSION['date'] = date("Y-m-d", strtotime("$_SESSION['date'] -1 day"));
+        $tmp1 = $_SESSION['date'];
+        $_SESSION['date'] = date("Y-m-d", strtotime("$tmp1 -1 day"));
         //$_SESSION['dateCompare'] = date("Y-m-d", strtotime("$currentDate -1 day"));
         echo ("left called");
     }
     else if ($_GET['rightBut']) {
-        $_SESSION['date'] = date("Y-m-d", strtotime("$_SESSION['date'] +1 day"));
+        $tmp2 =$_SESSION['date'];
+        $_SESSION['date'] = date("Y-m-d", strtotime("$tmp2 +1 day"));
         //$_SESSION['dateCompare'] = date("Y-m-d", strtotime("$currentDate +1 day"));
         echo ("right called");
     }
