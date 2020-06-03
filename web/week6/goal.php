@@ -31,10 +31,6 @@
         //$_SESSION['dateCompare'] = date("Y-m-d");
         echo ("left called");
     }
-
-    $currentDate = $_SESSION['date'];
-        //$dateCompare = $_SESSION['dateCompare']; 
-
     else if (isset($_GET['leftBut'])) {
         $_SESSION['date'] = date("Y-m-d", strtotime("$currentDate -1 day"));
         //$_SESSION['dateCompare'] = date("Y-m-d", strtotime("$currentDate -1 day"));
@@ -45,6 +41,9 @@
         //$_SESSION['dateCompare'] = date("Y-m-d", strtotime("$currentDate +1 day"));
         echo ("right called");
     }
+    
+    $currentDate = $_SESSION['date'];
+        //$dateCompare = $_SESSION['dateCompare']; 
     //$dateDisplay =  $_SESSION['date'];
 ?>
 
