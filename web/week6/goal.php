@@ -4,9 +4,9 @@
     $db = getDb();
 
     $name = '';
-    if (isset($_SESSION['currentId']) {
+    if (isset($_SESSION['currentId'])) {
         $name = $_SESSION['currentId'];
-    });
+    }
 
     if (isset($_GET['username'])) { 
         $_SESSION['username'] = $_GET['username'];
