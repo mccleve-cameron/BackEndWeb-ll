@@ -109,12 +109,13 @@
     }
     
 ?>
+
+</table>
     <form action="insert_goal.php" method="post">
         <input type="hidden" name="userId" value="<?php echo $userId; ?>">
         <input type="text" name="goalContent" id="goalContent">
         <input type="submit" value="Add Goal">
     </form>
-</table>
     <h3>Weekly Habits</h3>
     <table>
         <tr>
