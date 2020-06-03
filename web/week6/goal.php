@@ -109,7 +109,7 @@
             echo( 
                 "<tr>
                     <td>$date</td>
-                    <td>$goal</td>
+                    <td><input type='checkbox'>$goal</td>
                     <td>$complete</td>
                 </tr>");
         }
