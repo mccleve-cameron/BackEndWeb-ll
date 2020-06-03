@@ -25,9 +25,6 @@
     $stmt2->execute();
     $userHabits = $stmt2->fetchAll(PDO::FETCH_ASSOC);
     
-    if (isset($_SESSION['date'])) {
-        echo ("already set");
-    }
     if (!isset($_SESSION['date'])) {
 
         $_SESSION['date']= date("Y-m-d");
