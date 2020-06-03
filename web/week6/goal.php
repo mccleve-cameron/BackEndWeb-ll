@@ -106,8 +106,8 @@
                     <td><input type='checkbox'>$goal</td>
                     <td>                    
                         <form action='delete_goal.php' method='get'>
-                            <input type='hidden' name='username' value="<?php echo $username; ?>">
-                            <input type='hidden' name='taskId' value="<?php echo $taskId; ?>">
+                            <input type='hidden' name='username' value='$username'>
+                            <input type='hidden' name='taskId' value='$taskId'>
                             <input type='submit' value='Delete'>
                         </form>
                     </td>
