@@ -8,17 +8,20 @@ echo $taskId;
 echo $username;
 echo $complete;
 
-// require "../dbConnect.php";
-// $db = getDb();
+require "../dbConnect.php";
+$db = getDb();
 
-// $stmt = $db->prepare("DELETE FROM goals WHERE id = :taskId;");
-// $stmt->bindValue(':taskId', $taskId, PDO::PARAM_INT);
+$complete = !$complete;
 
-// $stmt->execute();
+$stmt = $db->prepare("UPDATE goals SET is_complete=:complete WHERE id = :taskId;");
+$stmt->bindValue(':complete', $complete, PDO::PARAM_BOOL);
+$stmt->bindValue(':taskId', $taskId, PDO::PARAM_BOOL);
 
-// $new_page = "goal.php?username=$username";
+$stmt->execute();
 
-// header("Location: $new_page");
-// die();
+$new_page = "goal.php?username=$username";
+
+header("Location: $new_page");
+die();
 
 ?>

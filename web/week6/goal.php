@@ -92,15 +92,34 @@
         $complete = $user['is_complete'];
         $date = $user['goal_date'];
 
-        if ($complete) {
-            $complete = true;
-        }
-        else {
-            $complete = false;
-        }
+
 
         if ($date == $_SESSION['date']) {
-            echo( 
+            if ($complete) {
+                $complete = true;
+                echo( 
+                    "<tr>
+                        <td>$date</td>
+                        <td>
+                            <form action='complete_goal.php' method='get'>
+                                <input type='hidden' name='username' value='$username'>
+                                <input type='hidden' name='taskId' value='$taskId'>
+                                <input type='hidden' name='complete' value='$complete'>
+                                <input type='submit' value='Undo'>
+                            </form>
+                        $goal</td>
+                        <td>                    
+                            <form action='delete_goal.php' method='get'>
+                                <input type='hidden' name='username' value='$username'>
+                                <input type='hidden' name='taskId' value='$taskId'>
+                                <input type='submit' value='Delete'>
+                            </form>
+                        </td>
+                    </tr>");
+            }
+            else {
+                $complete = false;
+                echo( 
                 "<tr>
                     <td>$date</td>
                     <td>
@@ -119,6 +138,7 @@
                         </form>
                     </td>
                 </tr>");
+            }
         }
     }
     
