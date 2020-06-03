@@ -1,9 +1,10 @@
 <?php
 
 $username = htmlspecialchars($_GET['username']);
-$taskId = htmlspecialchars($_GET['userId']);
+$taskId = htmlspecialchars($_GET['taskId']);
 
 echo $taskId;
+echo $username;
 
 // require "../dbConnect.php";
 // $db = getDb();
