@@ -28,19 +28,19 @@
     if (isset($_SESSION['date'])) {
         echo ("already set");
     }
-    else if (!isset($_SESSION['date'])) {
+    if (!isset($_SESSION['date'])) {
 
         $_SESSION['date']= date("Y-m-d");
         //$_SESSION['dateCompare'] = date("Y-m-d");
         echo ("start called");
     }
-    else if (isset($_GET['leftBut'])) {
+    if (isset($_GET['leftBut'])) {
         $tmp1 = $_SESSION['date'];
         $_SESSION['date'] = date("Y-m-d", strtotime("$tmp1 -1 day"));
         //$_SESSION['dateCompare'] = date("Y-m-d", strtotime("$currentDate -1 day"));
         echo ("left called");
     }
-    else if (isset($_GET['rightBut'])) {
+    if (isset($_GET['rightBut'])) {
         $tmp2 =$_SESSION['date'];
         $_SESSION['date'] = date("Y-m-d", strtotime("$tmp2 +1 day"));
         //$_SESSION['dateCompare'] = date("Y-m-d", strtotime("$currentDate +1 day"));
