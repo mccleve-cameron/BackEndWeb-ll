@@ -3,7 +3,7 @@
     require "../dbConnect.php";
     $db = getDb();
 
-    $name = 'Bob';
+    $name = $_SESSION['currentId'];
     if (isset($_GET['username'])) { 
         $_SESSION['username'] = $_GET['username'];
         $name = $_SESSION['username'];

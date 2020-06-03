@@ -1,8 +1,11 @@
 <?php
+session_start();
 
 $userId = htmlspecialchars($_POST['userId']);
 $newTask = htmlspecialchars($_POST['goalContent']);
 $addDate = $_POST['date'];
+
+$_SESSION['currentId'] = $userId;
 
 require "../dbConnect.php";
 $db = getDb();
