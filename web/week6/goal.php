@@ -92,12 +92,12 @@
         $complete = $user['is_complete'];
         $date = $user['goal_date'];
 
-        if ($complete) {
-            $complete = 'completed';
-        }
-        else {
-            $complete = 'not done';
-        }
+        // if ($complete) {
+        //     $complete = 'completed';
+        // }
+        // else {
+        //     $complete = 'not done';
+        // }
 
         if ($date == $_SESSION['date']) {
             echo( 
