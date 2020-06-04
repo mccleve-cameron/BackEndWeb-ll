@@ -67,10 +67,11 @@ footer {
     background-size: 90%;
     height: 20px;
     width: 22px;
+    border: none;
   
 }
 button {
-
+    border: none;
 }
 
 .linethru {
