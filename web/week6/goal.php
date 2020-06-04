@@ -141,43 +141,7 @@
     
 ?>
 
-</table>
-    <form action="insert_goal.php" method="get">
-        <input type="hidden" name="date" value="<?php echo $_SESSION['date']; ?>">
-        <input type="hidden" name="userId" value="<?php echo $userId; ?>">
-        <input type="hidden" name="username" value="<?php echo $username; ?>">
-        <input type="text" name="goalContent" id="goalContent">
-        <input type="submit" value="Add Goal">
-    </form>
-    <h3>Weekly Habits</h3>
-    <table>
-        <tr>
-            <th>Days</th>
-            <th>Habit</th>
-            <th>Status</th>
-        </tr>
-<?php
-    foreach ($userHabits as $userh){
-        $habit = $userh['habit_text'];
-        $complete = $userh['is_complete'];
-        $date = $userh['habit_date'];
 
-        if ($complete) {
-            $complete = 'completed';
-        }
-        else {
-            $complete = 'not done';
-        }
-        echo( 
-        "<tr>
-            <td>$date</td>
-            <td>$habit</td>
-            <td>$complete</td>
-        </tr>");
-    }
-    
-?>
-</table>
 
 </body>
 <footer>
