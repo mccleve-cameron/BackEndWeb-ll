@@ -94,8 +94,6 @@
         if ($date == $_SESSION['date']) {
             if ($complete) {
                 $complete = true;
-                echo ("true ");
-                echo ($complete);
                 echo( 
                     "<tr>
                         <td>
@@ -111,15 +109,13 @@
                             <form action='delete_goal.php' method='get'>
                                 <input type='hidden' name='username' value='$username'>
                                 <input type='hidden' name='taskId' value='$taskId'>
-                                $taskId<input type='submit' value='Delete'>
+                                <input type='submit' value='Delete'>
                             </form>
                         </td>
                     </tr>");
             }
             else {
                 $complete = false;
-                echo ("false ");
-                echo ($complete);
                 echo( 
                 "<tr>
                 <td>
