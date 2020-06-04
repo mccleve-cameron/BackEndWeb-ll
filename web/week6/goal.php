@@ -98,14 +98,16 @@
                 echo ($complete);
                 echo( 
                     "<tr>
-                        <td class='checked'></td>
+                        <td class='checked'>
                         <td>
                             <form action='complete_goal.php' method='get'>
+                                <input class='checked' type='submit'>
                                 <input type='hidden' name='username' value='$username'>
                                 <input type='hidden' name='taskId' value='$taskId'>
                                 <input type='hidden' name='complete' value='$complete'>
-                                <input type='submit' value='Undo'>
-                            </form>$goal</td>
+                            </form>
+                        </td>
+                        <td>$goal</td>
                         <td>                    
                             <form action='delete_goal.php' method='get'>
                                 <input type='hidden' name='username' value='$username'>
