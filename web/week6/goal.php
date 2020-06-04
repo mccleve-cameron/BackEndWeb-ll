@@ -101,9 +101,7 @@
                         <td>
                             <form action='complete_goal.php' method='get'>
                                 <input class='checked' type='submit'>
-                                <input type='hidden' name='username' value='$username'>
-                                <input type='hidden' name='taskId' value='$taskId'>
-                                <input type='hidden' name='complete' value='$complete'>
+                
                             </form>
                         </td>
                         <td>$goal</td>
