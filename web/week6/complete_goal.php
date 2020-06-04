@@ -4,9 +4,9 @@ $username = htmlspecialchars($_GET['username']);
 $taskId = htmlspecialchars($_GET['taskId']);
 $complete = htmlspecialchars($_GET['complete']);
 
-echo $taskId;
-echo $username;
-echo $complete;
+// echo $taskId;
+// echo $username;
+// echo $complete;
 
 require "../dbConnect.php";
 $db = getDb();
