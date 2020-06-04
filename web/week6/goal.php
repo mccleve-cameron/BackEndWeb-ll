@@ -95,7 +95,8 @@
 
 
         if ($date == $_SESSION['date']) {
-            if ($complete) {
+            $count = 0;
+            if ($complete && $count == 0) {
                 $complete = true;
                 echo ("true ");
                 echo ($complete);
@@ -117,6 +118,7 @@
                             </form>
                         </td>
                     </tr>");
+                    $count = 1;
             }
             else {
                 $complete = false;
