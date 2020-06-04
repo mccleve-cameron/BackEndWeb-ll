@@ -98,7 +98,6 @@
                 echo ($complete);
                 echo( 
                     "<tr>
-                        <td class='checked'>
                         <td>
                             <form action='complete_goal.php' method='get'>
                                 <input class='checked' type='submit'>
