@@ -122,14 +122,15 @@
                 echo ($complete);
                 echo( 
                 "<tr>
-                    <td class='circle'></td>
-                    <td>
-                        <form action='complete_goal.php' method='get'>
-                            <input type='hidden' name='username' value='$username'>
-                            <input type='hidden' name='taskId' value='$taskId'>
-                            <input type='hidden' name='complete' value='$complete'>
-                            $taskId<input type='submit' value='Complete'>
-                        </form>$goal</td>
+                <td>
+                <form action='complete_goal.php' method='get'>
+                    <input class='circle' type='submit'>
+                    <input type='hidden' name='username' value='$username'>
+                    <input type='hidden' name='taskId' value='$taskId'>
+                    <input type='hidden' name='complete' value='$complete'>
+                </form>
+            </td>
+                    <td>$goal</td>
                     <td>                    
                         <form action='delete_goal.php' method='get'>
                             <input type='hidden' name='username' value='$username'>
