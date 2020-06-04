@@ -14,7 +14,8 @@
     $stmt = $db->prepare("SELECT * FROM users AS u 
                     JOIN goals AS g 
                     ON u.id = g.user_id
-                    WHERE username=:name");
+                    WHERE username=:name
+                    ORDER BY g.id;");
     $stmt->bindValue(':name', $username, PDO::PARAM_STR);
     $stmt->execute();
     $userGoals = $stmt->fetchAll(PDO::FETCH_ASSOC);
