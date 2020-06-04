@@ -52,7 +52,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoHabit</title>
-    <link rel="stylesheet" href="goal.css">
+    
 </head>
 <form action="goal.php" method="get">
     <header>
