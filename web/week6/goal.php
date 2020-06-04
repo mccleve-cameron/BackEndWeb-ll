@@ -97,7 +97,8 @@
         if ($date == $_SESSION['date']) {
             if ($complete) {
                 $complete = true;
-                echo ("true " + $complete);
+                echo ("true ");
+                echo ($complete);
                 echo( 
                     "<tr>
                         <td>$date</td>
@@ -119,7 +120,8 @@
             }
             else {
                 $complete = false;
-                echo ("false " + $complete);
+                echo ("false ");
+                echo ($complete);
                 echo( 
                 "<tr>
                     <td>$date</td>
