@@ -83,6 +83,7 @@
             <th>Status</th>
         </tr>
 <?php
+           $count = 0;
     foreach ($userGoals as $user){
         $userId = $user['user_id'];
         $taskId = $user['id'];
@@ -95,7 +96,7 @@
 
 
         if ($date == $_SESSION['date']) {
-            $count = 0;
+ 
             if ($complete && $count == 0) {
                 $complete = true;
                 echo ("true ");
