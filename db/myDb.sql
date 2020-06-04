@@ -58,6 +58,10 @@ INSERT INTO habits VALUES (DEFAULT, 'read scriptures', FALSE, 7, 4);
 
 DELETE FROM goals WHERE id = 35;
 
+UPDATE goals
+SET is_complete=TRUE
+WHERE id = 34;
+
 SELECT * FROM users AS u 
 JOIN goals AS g 
 ON u.id = g.user_id;
@@ -65,7 +69,8 @@ ON u.id = g.user_id;
 SELECT * FROM users AS u 
 JOIN goals AS g 
 ON u.id = g.user_id
-WHERE username='John';
+WHERE username='Sue'
+ORDER BY g.id;
 
 SELECT * FROM users;
 SELECT * FROM goals;

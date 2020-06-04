@@ -78,11 +78,7 @@
  ?></h2>
       <h3>Daily Goals</h3>
     <table>
-        <tr>
-            <th>Date</th>
-            <th>Goal</th>
-            <th>Status</th>
-        </tr>
+
 <?php
     foreach ($userGoals as $user){
         $userId = $user['user_id'];
@@ -102,7 +98,7 @@
                 echo ($complete);
                 echo( 
                     "<tr>
-                        <td>$date</td>
+                        <td class='checked'></td>
                         <td>
                             <form action='complete_goal.php' method='get'>
                                 <input type='hidden' name='username' value='$username'>
@@ -125,7 +121,7 @@
                 echo ($complete);
                 echo( 
                 "<tr>
-                    <td>$date</td>
+                    <td class='circle'></td>
                     <td>
                         <form action='complete_goal.php' method='get'>
                             <input type='hidden' name='username' value='$username'>

@@ -49,3 +49,21 @@ footer {
     display: flex;
     justify-content: space-evenly;
 }
+
+.circle {
+    background-image: url("circle2.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 70%;
+    height: 15px;
+    width: 15px;
+}
+
+.checked {
+    background-image: url("checkedCircle.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 70%;
+    height: 15px;
+    width: 15px;
+}
