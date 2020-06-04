@@ -106,13 +106,12 @@
                                 <input type='hidden' name='taskId' value='$taskId'>
                                 <input type='hidden' name='complete' value='$complete'>
                                 <input type='submit' value='Undo'>
-                            </form>
-                        $goal</td>
+                            </form>$goal</td>
                         <td>                    
                             <form action='delete_goal.php' method='get'>
                                 <input type='hidden' name='username' value='$username'>
                                 <input type='hidden' name='taskId' value='$taskId'>
-                                <input type='submit' value='Delete'>
+                                $taskId<input type='submit' value='Delete'>
                             </form>
                         </td>
                     </tr>");
@@ -127,9 +126,8 @@
                             <input type='hidden' name='username' value='$username'>
                             <input type='hidden' name='taskId' value='$taskId'>
                             <input type='hidden' name='complete' value='$complete'>
-                            <input type='submit' value='Complete'>
-                        </form>
-                    $goal</td>
+                            $taskId<input type='submit' value='Complete'>
+                        </form>$goal</td>
                     <td>                    
                         <form action='delete_goal.php' method='get'>
                             <input type='hidden' name='username' value='$username'>
