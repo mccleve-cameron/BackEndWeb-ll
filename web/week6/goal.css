@@ -72,3 +72,8 @@ footer {
 button {
 
 }
+
+.linethru {
+    text-decoration: line-through;
+    opacity: .5;
+}

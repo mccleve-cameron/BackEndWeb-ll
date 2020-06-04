@@ -104,7 +104,7 @@
                                 <input type='hidden' name='complete' value='$complete'>
                             </form>
                         </td>
-                        <td>$goal</td>
+                        <td class='linethru'>$goal</td>
                         <td>                    
                             <form action='delete_goal.php' method='get'>
                                 <input type='hidden' name='username' value='$username'>
