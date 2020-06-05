@@ -27,3 +27,18 @@ body {
     margin-right: auto;
     width: 300px;
 }
+
+section {
+    color: rgba(0, 0, 0, .5);
+    margin-top: 100px;
+}
+
+.tmp {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tmp td {
+    border: 1px solid rgba(0, 0, 0, .2);
+}
