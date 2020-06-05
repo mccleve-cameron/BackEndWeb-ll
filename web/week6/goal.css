@@ -42,12 +42,13 @@ p {
 }
 
 footer {
-    border: 1px solid;
     width: 100%;
     position: fixed;
     bottom: 0;
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 20px;
+    ma
 }
 
 .circle {
