@@ -76,7 +76,7 @@
     $username = $userGoals[0]['username'];
     echo $username;
  ?></h2>
-      <h3>Daily Goals</h3>
+    <b>Today's Goals</b>
     <table>
 
 <?php
