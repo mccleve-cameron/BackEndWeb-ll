@@ -1,11 +1,14 @@
 header {
     text-align: center;
-    padding: 10px;
     background-color: teal;
     font-size: 25pt;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
+}
+
+article {
+    padding: 5px;
 }
 
 img {
@@ -16,18 +19,23 @@ img {
 body {
     text-align: center;
     background-color: whitesmoke;
-
+    font-family: 'Roboto', sans-serif;
 }
 
 table, th, tr, td {
     border: .5px solid;
     border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 3px;
 }
+
+td {
+    text-align: left;
+}
+
 table {
     width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
 }
 h2 {
     border-top: 1px solid;
@@ -35,6 +43,7 @@ h2 {
     width: 300px;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 5px;
 }
 p {
     margin-top: 0;
@@ -48,7 +57,7 @@ footer {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 20px;
-    ma
+
 }
 
 .circle {
@@ -71,11 +80,50 @@ footer {
     border: none;
   
 }
-button {
-
+.arrowBut {
+    background-color: teal;
+    font-size: 30pt;
+    border: none;
 }
 
 .linethru {
     text-decoration: line-through;
     opacity: .5;
+}
+
+.trash {
+    background-image: url("trash.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 75%;
+    height: 25px;
+    width: 25px;
+    border: none;
+}
+
+.icon {
+    width: 25px;
+
+}
+
+.addText {
+    width: 350px;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.add {
+    background-image: url("addTeal.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 95%;
+    height: 29px;
+    width: 31px;
+    border: none;
+}
+
+#goalContent {
+    width: 100%;
+
 }
