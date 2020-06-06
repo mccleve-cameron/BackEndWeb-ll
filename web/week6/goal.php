@@ -109,7 +109,7 @@
                             <form action='delete_goal.php' method='get'>
                                 <input type='hidden' name='username' value='$username'>
                                 <input type='hidden' name='taskId' value='$taskId'>
-                                <input type='submit' class='trash' value="">
+                                <input type='submit' class='trash' value=''>
                             </form>
                         </td>
                     </tr>");
@@ -118,7 +118,7 @@
                 $complete = false;
                 echo( 
                 "<tr>
-                <td>
+                <td class='icon'>
                 <form action='complete_goal.php' method='get'>
                     <input class='circle' type='submit'  value=''>
                     <input type='hidden' name='username' value='$username'>
@@ -127,11 +127,11 @@
                 </form>
             </td>
                     <td>$goal</td>
-                    <td>                    
+                    <td class='icon'>                    
                         <form action='delete_goal.php' method='get'>
                             <input type='hidden' name='username' value='$username'>
                             <input type='hidden' name='taskId' value='$taskId'>
-                            <input type='submit' value='Delete'>
+                            <input type='submit' class='trash' value=''>
                         </form>
                     </td>
                 </tr>");
