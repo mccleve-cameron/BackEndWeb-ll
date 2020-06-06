@@ -96,7 +96,7 @@
                 $complete = true;
                 echo( 
                     "<tr>
-                        <td>
+                        <td class='icon'>
                             <form action='complete_goal.php' method='get'>
                                 <input class='checked' type='submit' value=''>
                                 <input type='hidden' name='username' value='$username'>
@@ -105,7 +105,7 @@
                             </form>
                         </td>
                         <td class='linethru'>$goal</td>
-                        <td>                    
+                        <td class='icon'>                    
                             <form action='delete_goal.php' method='get'>
                                 <input type='hidden' name='username' value='$username'>
                                 <input type='hidden' name='taskId' value='$taskId'>
