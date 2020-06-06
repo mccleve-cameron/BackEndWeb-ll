@@ -56,14 +56,14 @@
 </head>
 <form action="goal.php" method="get">
     <header>
-        <button type="submit" name="leftBut" value="leftBut">
+        <button type="submit" name="leftBut" value="leftBut" class="arrowBut">
             <input type="hidden" name="username" value="<?php echo $username; ?>">  
             <i id="leftArrow" type="submit" name="left">&lt;</i>
         </button>
         <article><?php 
         $tmp3 = $_SESSION['date'];
         echo date("l, M d", strtotime($tmp3)); ?></article>
-        <button type="submit" name="rightBut" value="rightBut"> 
+        <button type="submit" name="rightBut" value="rightBut" class="arrowBut"> 
             <i id="rightArrow">&gt;</i>
         </button>
     </header>
@@ -147,7 +147,7 @@
         <input type="hidden" name="userId" value="<?php echo $userId; ?>">
         <input type="hidden" name="username" value="<?php echo $username; ?>">
         <input type="text" name="goalContent" id="goalContent">
-        <input type="submit" value="Add Goal">
+        <input type="submit" value='' class="add">
     </form>
 
 
