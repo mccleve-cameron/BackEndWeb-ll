@@ -109,7 +109,7 @@
                             <form action='delete_goal.php' method='get'>
                                 <input type='hidden' name='username' value='$username'>
                                 <input type='hidden' name='taskId' value='$taskId'>
-                                <input type='submit' value='Delete'>
+                                <input type='submit' class='trash' value="">
                             </form>
                         </td>
                     </tr>");
