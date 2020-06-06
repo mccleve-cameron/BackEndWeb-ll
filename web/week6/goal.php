@@ -142,11 +142,11 @@
 ?>
 
 </table>
-    <form action="insert_goal.php" method="get">
+    <form action="insert_goal.php" method="get" class="addText">
         <input type="hidden" name="date" value="<?php echo $_SESSION['date']; ?>">
         <input type="hidden" name="userId" value="<?php echo $userId; ?>">
         <input type="hidden" name="username" value="<?php echo $username; ?>">
-        <input type="text" name="goalContent" id="goalContent">
+        <input type="text" name="goalContent" id="goalContent" placeholder="add goal">
         <input type="submit" value='' class="add">
     </form>
 
