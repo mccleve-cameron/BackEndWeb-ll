@@ -23,7 +23,7 @@
     $stmt->execute();
     $userGoals = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    if ($userGoals == NULL){
+    if ($userGoals == 'Array'){
         echo("empty");
 
     }
