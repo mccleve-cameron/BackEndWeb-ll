@@ -26,7 +26,10 @@
     $userGoals = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     if ( empty($userGoals)){
-        echo("empty");
+        $new_page = "login.php";
+
+        header("Location: $new_page");
+        die();
 
     }
     else {
