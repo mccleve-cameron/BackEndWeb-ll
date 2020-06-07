@@ -12,19 +12,11 @@
 									JOIN goals AS g 
 									ON u.id = g.user_id
 									WHERE username=:name
-									AND password=:pass
 									ORDER BY g.id;");
 	$stmt->bindValue(':name', $username, PDO::PARAM_STR);
-	$stmt->bindValue(':pass', $password, PDO::PARAM_STR);
 	$stmt->execute();
 	$userGoals = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-	if ( empty($userGoals)){
-		echo ("empty");
-		// $new_page = "login.php";
-		// header("Location: $new_page");
-		// die();
-	}
 
 	$stmt2 = $db->prepare("SELECT * FROM users AS u 
 												JOIN habits AS h 
