@@ -45,20 +45,6 @@ label {
     font-weight: bold;
 }
 
-section button {
-    height: 100%;
-}
-
-section {
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    width: 100%;
-    margin-top: 5px;
-    text-align: left;
-    display: flex;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
 p {
     margin-top: 0;
     font-size: 9.5pt;
@@ -76,6 +62,10 @@ footer {
     justify-content: space-evenly;
     margin-bottom: 20px;
 
+}
+
+span button {
+    height: 30px;
 }
 
 .section {
