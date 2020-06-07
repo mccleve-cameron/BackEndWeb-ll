@@ -23,8 +23,10 @@
     $stmt->execute();
     $userGoals = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    echo("username is: ");
-    echo $username;
+    echo("usergoals is: ");
+    echo $userGoals;
+
+
 
     $stmt2 = $db->prepare("SELECT * FROM users AS u 
                     JOIN habits AS h 
