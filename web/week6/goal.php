@@ -24,7 +24,7 @@
     $userGoals = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     echo("usergoals is: ");
-    echo $userGoals;
+    echo $userGoals['id'][0];
 
 
 
