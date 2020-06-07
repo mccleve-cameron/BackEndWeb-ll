@@ -20,9 +20,10 @@
 	$userGoals = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 	if ( empty($userGoals)){
-		$new_page = "login.php";
-		header("Location: $new_page");
-		die();
+		echo ("empty");
+		// $new_page = "login.php";
+		// header("Location: $new_page");
+		// die();
 	}
 
 	$stmt2 = $db->prepare("SELECT * FROM users AS u 
