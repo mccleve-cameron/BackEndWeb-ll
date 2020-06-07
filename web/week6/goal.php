@@ -23,8 +23,14 @@
     $stmt->execute();
     $userGoals = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    echo("usergoals is: ");
-    echo $userGoals['id'][0];
+    if ($userGoals == NULL){
+        echo("empty");
+
+    }
+    else {
+        echo("usergoals is: ");
+        echo $userGoals;
+    }
 
 
 
