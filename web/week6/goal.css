@@ -64,6 +64,10 @@ p {
     font-size: 9.5pt;
 }
 
+a {
+    text-decoration: none;
+}
+
 footer {
     width: 100%;
     position: fixed;
