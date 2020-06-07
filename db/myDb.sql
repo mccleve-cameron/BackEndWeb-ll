@@ -72,6 +72,12 @@ ON u.id = g.user_id
 WHERE username='Sue'
 ORDER BY g.id;
 
+SELECT * FROM users AS u 
+JOIN habits AS h 
+ON u.id = h.user_id
+WHERE username='Bob'
+ORDER BY h.id;
+
 SELECT * FROM users;
 SELECT * FROM goals;
 SELECT * FROM habits;

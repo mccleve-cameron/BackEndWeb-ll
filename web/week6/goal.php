@@ -3,14 +3,17 @@
     require "../dbConnect.php";
     $db = getDb();
 
-    if (!isset($_GET['username'])) { 
-        die("Error, username not specified...");
-    }
-
+    $_SESSION['password'] = $_GET['password'];
     $_SESSION['username'] = $_GET['username'];
     $username = $_SESSION['username'];
+    $password = $_SESSION['password'];
     
+    // $stmt = $db->prepare("SELECT * FROM users WHERE username=:name AND password = 'sue1';");
+    // $stmt->bindValue(':name', $username, PDO::PARAM_STR);
+    // $stmt->execute();
+    // $userGoals = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    
     $stmt = $db->prepare("SELECT * FROM users AS u 
                     JOIN goals AS g 
                     ON u.id = g.user_id
@@ -19,6 +22,9 @@
     $stmt->bindValue(':name', $username, PDO::PARAM_STR);
     $stmt->execute();
     $userGoals = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    echo("username is: ");
+    echo $username;
 
     $stmt2 = $db->prepare("SELECT * FROM users AS u 
                     JOIN habits AS h 

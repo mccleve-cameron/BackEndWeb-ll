@@ -20,7 +20,7 @@
 <body>
     <form action="goal.php" method="get" class="input"> 
         <input id="uInput" name="username" type="search" placeholder="username">
-        <input id="password" type="text" placeholder="password">
+        <input id="password" name="password" type="text" placeholder="password">
         <button id="login" type="submit">Login</button>
     </form>
     <section>
