@@ -11,59 +11,107 @@
 <form action="goal.php" method="get">
     <header>
         <button type="submit" name="leftBut" value="leftBut" class="arrowBut">
-            <input type="hidden" name="username" value="">  
+            <input type="hidden" name="username" value="">
             <i id="leftArrow" type="submit" name="left">&lt;</i>
         </button>
         <article id="date"></article>
-        <button type="submit" name="rightBut" value="rightBut" class="arrowBut"> 
+        <button type="submit" name="rightBut" value="rightBut" class="arrowBut">
             <i id="rightArrow">&gt;</i>
         </button>
     </header>
 </form>
 
 <body>
-    <h2>Bob</h2>
-    <b>Today's Goals</b>
-    <table>
-        <tr>
-            <td class="icon"><input class="checked" type="submit" value=""></td>
-            <td class="linethru">out trash knolnk</td>
-            <td class="icon">
-                <form action='delete_goal.php' method='get'>
-                    <input type='hidden' name='username' value=''>
-                    <input type='hidden' name='taskId' value=''>
-                    <input type='submit' class="trash" value="">
-                </form>
-            </td>
-        </tr>
-        <tr>
-            <td><input class="circle" type="submit" value=""></td>
-            <td>take out trash</td>
-            <td>
-                <form action='delete_goal.php' method='get'>
-                    <input type='hidden' name='username' value=''>
-                    <input type='hidden' name='taskId' value=''>
-                    <input type='submit' class="trash" value="">
-                </form>
-            </td>
-        </tr>
-        <tr>
-            <td><input class="circle" type="submit" value=""></td>
-            <td>take out trash</td>
-            <td>
-                <form action='delete_goal.php' method='get'>
-                    <input type='hidden' name='username' value=''>
-                    <input type='hidden' name='taskId' value=''>
-                    <input type='submit' class="trash" value="">
-                </form>
-            </td>
-        </tr>
-    </table>
-    <form action="insert_goal.php" method="post" class="addText">
-        <input type="hidden" name="userId">
-        <input type="text" name="goalContent" id="goalContent" placeholder="add goal">
-        <input type="submit" value="" class="add">
-    </form>
+    <section>
+        <label>Bob</label><span><button>Logout</button></span>
+    </section>
+    <div class="section">
+        <b>Today's Goals</b>
+        <table>
+            <tr>
+                <td class="icon"><input class="checked" type="submit" value=""></td>
+                <td class="linethru">out trash knolnk</td>
+                <td class="icon">
+                    <form action='delete_goal.php' method='get'>
+                        <input type='hidden' name='username' value=''>
+                        <input type='hidden' name='taskId' value=''>
+                        <input type='submit' class="trash" value="">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="circle" type="submit" value=""></td>
+                <td>take out trash</td>
+                <td>
+                    <form action='delete_goal.php' method='get'>
+                        <input type='hidden' name='username' value=''>
+                        <input type='hidden' name='taskId' value=''>
+                        <input type='submit' class="trash" value="">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="circle" type="submit" value=""></td>
+                <td>take out trash</td>
+                <td>
+                    <form action='delete_goal.php' method='get'>
+                        <input type='hidden' name='username' value=''>
+                        <input type='hidden' name='taskId' value=''>
+                        <input type='submit' class="trash" value="">
+                    </form>
+                </td>
+            </tr>
+        </table>
+        <form action="insert_goal.php" method="post" class="addText">
+            <input type="hidden" name="userId">
+            <input type="text" name="goalContent" id="goalContent" placeholder="add goal">
+            <input type="submit" value="" class="add">
+        </form>
+    </div>
+
+    <div class="section">
+        <b>Everyday Habits</b>
+        <table>
+            <tr>
+                <td class="icon"><input class="checked" type="submit" value=""></td>
+                <td class="linethru">out trash knolnk</td>
+                <td class="icon">
+                    <form action='delete_goal.php' method='get'>
+                        <input type='hidden' name='username' value=''>
+                        <input type='hidden' name='taskId' value=''>
+                        <input type='submit' class="trash" value="">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="circle" type="submit" value=""></td>
+                <td>take out trash</td>
+                <td>
+                    <form action='delete_goal.php' method='get'>
+                        <input type='hidden' name='username' value=''>
+                        <input type='hidden' name='taskId' value=''>
+                        <input type='submit' class="trash" value="">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="circle" type="submit" value=""></td>
+                <td>take out trash</td>
+                <td>
+                    <form action='delete_goal.php' method='get'>
+                        <input type='hidden' name='username' value=''>
+                        <input type='hidden' name='taskId' value=''>
+                        <input type='submit' class="trash" value="">
+                    </form>
+                </td>
+            </tr>
+        </table>
+        <form action="insert_goal.php" method="post" class="addText">
+            <input type="hidden" name="userId">
+            <input type="text" name="goalContent" id="goalContent" placeholder="add habit">
+            <input type="submit" value="" class="add">
+        </form>
+    </div>
 
     <script src="goal.js">
     </script>
@@ -79,7 +127,7 @@
     </script>
 </body>
 <footer>
-    <span><button>Logout</button></span>
+
 </footer>
 
 </html>
