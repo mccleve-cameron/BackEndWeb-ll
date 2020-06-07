@@ -18,8 +18,10 @@
                     JOIN goals AS g 
                     ON u.id = g.user_id
                     WHERE username=:name
+                    AND password=:pass
                     ORDER BY g.id;");
     $stmt->bindValue(':name', $username, PDO::PARAM_STR);
+    $stmt->bindValue(':pass', $password, PDO::PARAM_STR);
     $stmt->execute();
     $userGoals = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
